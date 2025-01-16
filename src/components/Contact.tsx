@@ -4,9 +4,10 @@ import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
 const Contact: React.FC = () => {
     return (
         <section className="my-12 px-4 max-w-3xl mx-auto text-center md:text-left">
-            <h2 className="text-4xl sm:text-4xl lg:text-5xl font-semibold mb-4">Get in Touch!</h2>
+            <h2 className="bg-gradient-to-b from-black to-gray-500 bg-clip-text text-transparent text-4xl sm:text-4xl lg:text-5xl font-semibold mb-4">Get in Touch!</h2>
             <p className="mt-4 text-gray-600 text-md sm:text-base lg:text-lg leading-relaxed text-center md:text-left mb-6">
-                Have a great project idea or just want to connect? I'd love to hear from you! Let's build something amazing together. 🚀
+                I am eager to contribute to impactful projects. Let's connect
+                and discuss how I can bring value to your team!
             </p>
             <div className="flex justify-center gap-6">
                 {/* Email Button */}

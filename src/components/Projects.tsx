@@ -52,7 +52,7 @@ export const Projects: React.FC = () => {
     return (
         <section className="my-8 px-4 max-w-3xl mx-auto">
             <div className="text-center md:text-left mb-8">
-                <h2 className="text-4xl sm:text-4xl lg:text-5xl font-semibold mb-4">Projects</h2>
+                <h2 className="bg-gradient-to-b from-black to-gray-500 bg-clip-text text-transparent text-4xl sm:text-4xl lg:text-5xl font-semibold mb-4">My Projects</h2>
                 <p className="text-gray-700 dark:text-gray-300 text-lg">
                     Here are some of the projects I have worked on recently, showcasing my skills in web development, 
                     open-source contributions, and modern UI/UX design.

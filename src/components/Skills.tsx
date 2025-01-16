@@ -9,14 +9,20 @@ export const Skills: React.FC = () => {
     return (
         <section className="my-8 px-4 max-w-3xl mx-auto">
             {/* Título */}
-            <h2 className="text-4xl sm:text-4xl lg:text-5xl font-semibold text-center md:text-left mb-6">
-                Skills
+            <h2 className="bg-gradient-to-b from-black to-gray-500 bg-clip-text text-transparent text-4xl sm:text-4xl lg:text-5xl font-semibold text-center md:text-left mb-6">
+                Tech Stack & Skills
             </h2>
+
+            {/* Descripción */}
+            <p className="text-md sm:text-lg lg:text-xl text-gray-600 text-center md:text-left mb-6 leading-relaxed">
+                I am dedicated to continuously growing my expertise and delivering impactful solutions. 
+                I am eager to bring my skills to a collaborative team, where I can contribute to building exceptional projects while continuing to grow as a developer.
+            </p>
 
             {/* Orbiting Circles */}
             <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden ">
                 <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-500 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent">
-                    Skills
+                    16
                 </span>
 
                 {/* Órbita principal */}

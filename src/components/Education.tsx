@@ -1,20 +1,30 @@
 import React from 'react';
 
 const education = [
-    { institution: 'Harvard University', degree: 'Bachelor of Computer Science', date: '2015 - 2019' },
-    { institution: 'Stanford University', degree: 'Master of Business Administration', date: '2020 - 2022' },
-    { institution: 'Online Bootcamp', degree: 'Full-Stack Web Development', date: '2023' },
+    {
+        institution: 'Universidad Tecnológica Latinoamericana en Línea',
+        degree: "Bachelor's Degree in Information Technology Administration",
+        date: 'February 2022 - Present',
+    },
+    {
+        institution: 'DEV.F',
+        degree: 'Master in Coding: Backend, Frontend, and Fullstack Development',
+        date: 'June 2024 - Present',
+    },
 ];
 
 const Education: React.FC = () => {
     return (
         <section className="my-8 px-4 max-w-3xl mx-auto">
-            <h2 className="text-4xl sm:text-4xl lg:text-5xl font-semibold text-center md:text-left">
+            <h2 className="bg-gradient-to-b from-black to-gray-500 bg-clip-text text-transparent text-4xl sm:text-4xl lg:text-5xl font-semibold text-center md:text-left">
                 Education
             </h2>
             <ul className="mt-6 space-y-6">
                 {education.map((edu, index) => (
-                    <li key={index} className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4">
+                    <li
+                        key={index}
+                        className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4"
+                    >
                         {/* Placeholder para el logo o imagen */}
                         <div className="w-12 h-12 bg-gray-200 rounded-full flex-shrink-0"></div>
                         {/* Detalles de la educación */}

@@ -7,10 +7,10 @@ const Header: React.FC = () => {
             {/* Texto del encabezado */}
             <div className="flex-1">
                 <h1 className="text-5xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                    Hi, I'm <span className="text-blue-500">Dillion</span> 👋
+                    Hi, I'm <span className="bg-gradient-to-b from-blue-500 to-blue-300 bg-clip-text text-transparent">Héctor</span> 👋
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl mt-4 text-gray-600">
-                    Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.
+                    Customer service expert turned full-stack developer. Passionate about creating efficient and scalable web solutions using technologies like React, Node.js, and Tailwind.
                 </p>
             </div>
 
