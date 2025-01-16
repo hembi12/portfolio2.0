@@ -1,4 +1,5 @@
 import React from 'react';
+import InteractiveHoverButton from '@/components/ui/interactive-hover-button';
 
 const experiences = [
     { company: 'Atomic Finance', role: 'Bitcoin Protocol Engineer', date: 'May 2021 - Oct 2022' },
@@ -14,7 +15,10 @@ const WorkExperience: React.FC = () => {
             </h2>
             <ul className="mt-6 space-y-6">
                 {experiences.map((exp, index) => (
-                    <li key={index} className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4">
+                    <li
+                        key={index}
+                        className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4"
+                    >
                         {/* Placeholder para el logo o imagen */}
                         <div className="w-12 h-12 bg-gray-200 rounded-full flex-shrink-0"></div>
                         {/* Detalles de la experiencia */}
@@ -26,6 +30,11 @@ const WorkExperience: React.FC = () => {
                     </li>
                 ))}
             </ul>
+            {/* Botones para el CV */}
+            <div className="mt-8 flex border-t border-gray-200 justify-center md:justify-start gap-4 pt-4">
+                <InteractiveHoverButton text="View CV" />
+                <InteractiveHoverButton text="Download" />
+            </div>
         </section>
     );
 };

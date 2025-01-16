@@ -3,7 +3,7 @@ import ProfilePicture from '../assets/ProfilePicture.webp'; // Importamos la ima
 
 const Header: React.FC = () => {
     return (
-        <header className="flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-left my-8 px-4 max-w-3xl mx-auto">
+        <header className="flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-left mt-32 px-4 max-w-3xl mx-auto">
             {/* Texto del encabezado */}
             <div className="flex-1">
                 <h1 className="text-5xl sm:text-5xl lg:text-6xl font-bold leading-tight">

@@ -1,6 +1,5 @@
 "use client";
 
-import { cva, type VariantProps } from "class-variance-authority";
 import {
   motion,
   MotionProps,
@@ -8,12 +7,17 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
-} from "motion/react";
+  HTMLMotionProps,
+} from "framer-motion";
 import React, { PropsWithChildren, useRef } from "react";
+import { type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
+import { dockVariants } from "@/lib/dockUtils"; // Actualiza la ruta según tu estructura
 
-export interface DockProps extends VariantProps<typeof dockVariants> {
+export interface DockProps
+  extends VariantProps<typeof dockVariants>,
+    HTMLMotionProps<"div"> {
   className?: string;
   iconSize?: number;
   iconMagnification?: number;
@@ -25,10 +29,6 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
 const DEFAULT_SIZE = 40;
 const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
-
-const dockVariants = cva(
-  "supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[58px] w-max items-center justify-center gap-2 rounded-2xl border p-2 backdrop-blur-md",
-);
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   (
@@ -138,4 +138,4 @@ const DockIcon = ({
 
 DockIcon.displayName = "DockIcon";
 
-export { Dock, DockIcon, dockVariants };
+export { Dock, DockIcon };
