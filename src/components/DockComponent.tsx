@@ -80,19 +80,19 @@ const DockComponent: React.FC = () => {
 
     const dockItems: DockItemType[] = [
         { href: '#header', icon: HomeIcon, label: 'Home' },
-        { href: '#about', icon: SmileIcon, label: 'About' },
+        { href: '#about', icon: SmileIcon, label: 'About Me' },
         { href: '#work-experience', icon: BriefcaseIcon, label: 'Work Experience' },
         { href: '#education', icon: GraduationCapIcon, label: 'Education' },
         { href: '#skills', icon: ZapIcon, label: 'Skills' },
-        { href: '#projects', icon: CodeIcon, label: 'My Projects' },
+        { href: '#projects', icon: CodeIcon, label: 'Built from Scratch' },
         { href: '#contact', icon: MailIcon, label: 'Contact' },
     ];
 
     return (
         <Tooltip.Provider>
             <Dock
-                className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 
-                bg-white border border-gray-800 rounded-lg shadow-lg p-2"
+                className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 
+                bg-black rounded-lg shadow-lg p-2"
                 iconSize={dockConfig.size}
                 iconMagnification={dockConfig.magnification}
                 iconDistance={dockConfig.distance}

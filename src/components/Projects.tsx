@@ -52,20 +52,19 @@ export const Projects: React.FC = () => {
     return (
         <section className="my-8 px-4 max-w-3xl mx-auto">
             <div className="text-center md:text-left mb-8">
-                <h2 className="bg-gradient-to-b from-black to-gray-500 bg-clip-text text-transparent text-4xl sm:text-4xl lg:text-5xl font-semibold mb-4">My Projects</h2>
-                <p className="text-gray-700 dark:text-gray-300 text-lg">
-                    Here are some of the projects I have worked on recently, showcasing my skills in web development, 
-                    open-source contributions, and modern UI/UX design.
+                <h2 className="text-4xl sm:text-4xl lg:text-5xl font-semibold mb-4">Built from Scratch</h2>
+                <p className="text-lg">
+                    Here are some of the <span className="text-cyan-200">projects</span> I have worked on recently, showcasing my skills in <span className="text-cyan-200">web development</span>, open-source contributions, and <span className="text-cyan-200">modern UI/UX design</span>.
                 </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="relative flex flex-col rounded-lg shadow-md bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 overflow-hidden"
+                        className="relative flex flex-col rounded-lg shadow-md bg-gray-50 overflow-hidden"
                     >
                         {/* Border Beam */}
-                        <BorderBeam size={250} duration={12} delay={index * 2} />
+                        <BorderBeam/>
 
                         {/* Imagen previa del proyecto */}
                         <img

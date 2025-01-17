@@ -14,13 +14,27 @@ import Footer from './components/Footer';
 const App: React.FC = () => {
   return (
     <div className="font-sans">
-      <Header />
-      <About />
-      <WorkExperience />
-      <Education />
-      <Skills />
+      <section id="header">
+        <Header />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="projects">
       <Projects />
-      <Contact />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
+      <section id="work-experience">
+        <WorkExperience />
+      </section>
+      <section id="education">
+        <Education />
+      </section>
 
       {/* Dock fijo al final */}
       <DockComponent />

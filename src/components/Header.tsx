@@ -3,14 +3,15 @@ import ProfilePicture from '../assets/ProfilePicture.webp'; // Importamos la ima
 
 const Header: React.FC = () => {
     return (
-        <header className="flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-left mt-32 px-4 max-w-3xl mx-auto">
+        <header className="flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-left mt-16 px-4 max-w-3xl mx-auto">
             {/* Texto del encabezado */}
             <div className="flex-1">
                 <h1 className="text-5xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                    Hi, I'm <span className="bg-gradient-to-b from-blue-500 to-blue-300 bg-clip-text text-transparent">Héctor</span> 👋
+                    Hi, I'm <span className="bg-gradient-to-b from-cyan-500 to-cyan-200 bg-clip-text text-transparent">Héctor</span> 👋
                 </h1>
-                <p className="text-base sm:text-lg lg:text-xl mt-4 text-gray-600">
-                    Customer service expert turned full-stack developer. Passionate about creating efficient and scalable web solutions using technologies like React, Node.js, and Tailwind.
+                <p className="text-base sm:text-lg lg:text-xl mt-4">
+                    <span className="text-cyan-200">Customer service expert</span> turned
+                    <span className="text-cyan-200"> full-stack developer</span>. Passionate about programming who sits in front of his monitors every day to <span className="text-cyan-200">learn something new</span>.
                 </p>
             </div>
 
