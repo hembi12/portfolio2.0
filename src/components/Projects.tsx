@@ -8,14 +8,14 @@ const projects = [
         description:
             'I developed an interactive landing page mockup focused on optimizing the presentation of key elements, such as an eye-catching headline, highlighted benefits, and clear action buttons.',
         tags: ['Javascript', 'React', 'Express', 'i18next', 'Git', 'Vercel', 'Tailwind', 'Node.js'],
-        image: 'https://via.placeholder.com/400x200',
+        image: '/path/to/landingpage.gif', // Reemplaza con la URL real del GIF de landingpage
     },
     {
         title: 'Dental clinic website',
         description:
             'I designed a mockup for a dental clinic website. The design included a clear call to action for scheduling appointments, ensuring a fluid user experience before its development and implementation.',
         tags: ['Typescript', 'Next.js', 'React', 'Git', 'Vercel', 'Tailwind', 'Node.js'],
-        image: 'https://via.placeholder.com/400x200',
+        image: '/path/to/dentalclinic.gif', // Reemplaza con la URL real del GIF de dentalclinic
     },
     {
         title: 'Birthday invitation',
