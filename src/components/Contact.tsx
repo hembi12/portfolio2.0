@@ -4,16 +4,15 @@ import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
 const Contact: React.FC = () => {
     return (
         <section className="my-12 px-4 max-w-3xl mx-auto text-center md:text-left">
-            <h2 className="bg-gradient-to-b from-black to-gray-500 bg-clip-text text-transparent text-4xl sm:text-4xl lg:text-5xl font-semibold mb-4">Get in Touch!</h2>
-            <p className="mt-4 text-gray-600 text-md sm:text-base lg:text-lg leading-relaxed text-center md:text-left mb-6">
-                I am eager to contribute to impactful projects. Let's connect
-                and discuss how I can bring value to your team!
+            <h2 className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent text-4xl sm:text-4xl lg:text-5xl font-semibold mb-4">Get in Touch!</h2>
+            <p className="mt-4 text-gray-200 text-md sm:text-base lg:text-lg leading-relaxed text-center md:text-left mb-6">
+                I am eager to contribute to <span className="text-cyan-200">impactful projects</span>. Let's <span className="text-cyan-200">connect</span> and discuss how I can bring <span className="text-cyan-200">value</span> to your <span className="text-cyan-200">team</span>!
             </p>
             <div className="flex justify-center gap-6">
                 {/* Email Button */}
                 <a
                     href="mailto:yourname@example.com"
-                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-black text-white font-medium text-sm shadow-md hover:bg-gray-800 transition"
+                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-medium text-sm shadow-md hover:bg-gray-200 transition"
                 >
                     <FaEnvelope />
                     Email Me

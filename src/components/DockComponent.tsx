@@ -35,15 +35,14 @@ const DockItem: React.FC<{ item: DockItemType; mouseX: MotionValue<number>; size
                 >
                     <DockIcon>
                         <a href={item.href} aria-label={item.label} className="rounded-full p-2">
-                            <item.icon className="w-6 h-6" />
-                        </a>
+                        <item.icon className="w-6 h-6 hover:text-cyan-200 transition-colors duration-200" />                        </a>
                     </DockIcon>
                 </motion.div>
             </Tooltip.Trigger>
             <Tooltip.Content
                 side="top"
                 align="center"
-                className="rounded bg-black px-2 py-1 text-xs text-white shadow-lg"
+                className="rounded bg-white px-2 py-1 text-xs text-black shadow-lg"
             >
                 {item.label}
                 <Tooltip.Arrow className="fill-black" />

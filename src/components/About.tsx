@@ -3,10 +3,10 @@ import React from 'react';
 const About: React.FC = () => {
     return (
         <section className="my-8 px-4 max-w-3xl mx-auto">
-            <h2 className="font-extrabold text-4xl sm:text-4xl lg:text-5xl font-semibold text-center md:text-left">
+            <h2 className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent font-extrabold text-4xl sm:text-4xl lg:text-5xl font-semibold text-center md:text-left">
                 Driven by Creativity
             </h2>
-            <p className="mt-4 text-md sm:text-base lg:text-lg leading-relaxed text-center md:text-left">
+            <p className="text-gray-200 mt-4 text-md sm:text-base lg:text-lg leading-relaxed text-center md:text-left">
                 I want to start a <span className="text-cyan-200">new career</span> dedicated to the
                 <span className="text-cyan-200"> creativity </span> that comes from starting a
                 <span className="text-cyan-200"> new project </span> and developing it until I see it

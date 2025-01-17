@@ -3,9 +3,9 @@ import React from "react";
 const Footer: React.FC = () => {
     return (
         <footer className="bg-black text-white py-6">
-            <div className="pb-16 container mx-auto px-4 text-center">
+            <div className="gap-4 pt-4 border-t border-gray-100 pb-16 max-w-3xl mx-auto px-4 text-center">
                 <p className="text-sm mb-4">
-                    Designed and Built by <span className="font-semibold">Your Name</span>.
+                    Designed and Built by <span className="text-cyan-200 font-semibold">Héctor Martil</span>.
                 </p>
                 <p className="text-sm">
                     © {new Date().getFullYear()} All Rights Reserved.
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                         href="https://github.com/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-gray-400 transition"
+                        className="text-cyan-200 hover:text-cyan-50 transition"
                     >
                         GitHub
                     </a>
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                         href="https://linkedin.com/in/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-gray-400 transition"
+                        className="text-cyan-200 hover:text-cyan-50 transition"
                     >
                         LinkedIn
                     </a>

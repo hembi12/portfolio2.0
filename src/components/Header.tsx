@@ -7,9 +7,9 @@ const Header: React.FC = () => {
             {/* Texto del encabezado */}
             <div className="flex-1">
                 <h1 className="text-5xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                    Hi, I'm <span className="bg-gradient-to-b from-cyan-500 to-cyan-200 bg-clip-text text-transparent">Héctor</span> 👋
+                    <span className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent">Hi, I'm</span> <span className="bg-gradient-to-b from-cyan-500 to-cyan-200 bg-clip-text text-transparent">Héctor</span> <span>👋</span>
                 </h1>
-                <p className="text-base sm:text-lg lg:text-xl mt-4">
+                <p className="text-gray-200 mt-4 text-md sm:text-base lg:text-xl leading-relaxed text-center md:text-left">
                     <span className="text-cyan-200">Customer service expert</span> turned
                     <span className="text-cyan-200"> full-stack developer</span>. Passionate about programming who sits in front of his monitors every day to <span className="text-cyan-200">learn something new</span>.
                 </p>
