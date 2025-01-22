@@ -29,6 +29,7 @@ const WorkExperience: React.FC = () => {
                                 src={exp.logo}
                                 alt={`${exp.company} logo`}
                                 className="w-full h-full object-cover rounded-full"
+                                loading="lazy" // Lazy loading agregado
                             />
                         </div>
                         {/* Detalles de la experiencia */}
