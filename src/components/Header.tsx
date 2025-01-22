@@ -25,7 +25,7 @@ const Header: React.FC = () => {
             </div>
 
             {/* Imagen de perfil */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 mt-6 -mr-6"> {/* Agregado mt-4 */}
                 <img
                     src={ProfilePicture}
                     alt="Profile picture"

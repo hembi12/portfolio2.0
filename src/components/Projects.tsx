@@ -4,32 +4,40 @@ import InteractiveHoverButton from '@/components/ui/interactive-hover-button';
 
 const projects = [
     {
+        title: 'Portfolio V1',
+        description:
+            'I developed the first version of my portfolio website to showcase my skills, projects, and experience responsive design, and a clear structure to effectively present my work to potential employers.',
+        tags: ['Javascript', 'React', 'Express', 'i18next', 'Git', 'Vercel', 'Tailwind', 'Node.js'],
+        image: 'src/assets/project4.png',
+        website: 'https://www.hectormartil.dev/',
+        repository: 'https://github.com/hembi12/my-portfolio',
+    },
+    {
         title: 'Landing page',
         description:
             'I developed an interactive landing page mockup focused on optimizing the presentation of key elements, such as an eye-catching headline, highlighted benefits, and clear action buttons.',
         tags: ['Javascript', 'React', 'Express', 'i18next', 'Git', 'Vercel', 'Tailwind', 'Node.js'],
-        image: '/path/to/landingpage.gif', // Reemplaza con la URL real del GIF de landingpage
-    },
-    {
-        title: 'Dental clinic website',
-        description:
-            'I designed a mockup for a dental clinic website. The design included a clear call to action for scheduling appointments, ensuring a fluid user experience before its development and implementation.',
-        tags: ['Typescript', 'Next.js', 'React', 'Git', 'Vercel', 'Tailwind', 'Node.js'],
-        image: '/path/to/dentalclinic.gif', // Reemplaza con la URL real del GIF de dentalclinic
+        image: 'src/assets/project1.png',
+        website: 'https://landing-page-woad-pi-82.vercel.app/',
+        repository: 'https://github.com/hembi12/landing-page',
     },
     {
         title: 'Birthday invitation',
         description:
             'I created an interactive invitation page for my birthday celebration, a personalized RSVP form, and detailed event information to ensure a memorable experience for all my guests.',
         tags: ['HTML 5', 'CSS', 'Javascript', 'Bootstrap', 'Git', 'Firebase'],
-        image: 'https://via.placeholder.com/400x200',
+        image: 'src/assets/project3.png',
+        website: 'https://rsvp-cumple.web.app/',
+        repository: 'https://github.com/hembi12/cumplea-os_30',
     },
     {
-        title: 'Portfolio Website',
+        title: 'Dental clinic website',
         description:
-            'I developed the first version of my portfolio website to showcase my skills, projects, and experience responsive design, and a clear structure to effectively present my work to potential employers.',
-        tags: ['Javascript', 'React', 'Express', 'i18next', 'Git', 'Vercel', 'Tailwind', 'Node.js'],
-        image: 'https://via.placeholder.com/400x200',
+            'I designed a mockup for a dental clinic website. The design included a clear call to action for scheduling appointments, ensuring a fluid user experience before its development and implementation.',
+        tags: ['Typescript', 'Next.js', 'React', 'Git', 'Vercel', 'Tailwind', 'Node.js'],
+        image: 'src/assets/project2.png',
+        website: 'https://appointments-liard.vercel.app/',
+        repository: 'https://github.com/hembi12/appointments',
     },
 ];
 
@@ -70,7 +78,7 @@ const Projects: React.FC = () => {
                         <img
                             src={project.image}
                             alt={`${project.title} preview`}
-                            className="w-full h-48 object-cover"
+                            className="w-full h-48 object-fit"
                         />
                         <div className="p-6 flex flex-col flex-grow">
                             <h3 className="text-gray-900 text-2xl font-bold mb-2">{project.title}</h3>
@@ -87,8 +95,14 @@ const Projects: React.FC = () => {
                                 ))}
                             </div>
                             <div className="mt-auto flex gap-4 pt-4 border-t border-gray-900">
-                                <InteractiveHoverButton text="Website" />
-                                <InteractiveHoverButton text="Code" />
+                                <InteractiveHoverButton
+                                    text="Website"
+                                    href={project.website}
+                                />
+                                <InteractiveHoverButton
+                                    text="Code"
+                                    href={project.repository}
+                                />
                             </div>
                         </div>
                     </div>
