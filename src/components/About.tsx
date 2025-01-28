@@ -1,20 +1,24 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const About: React.FC = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="my-8 px-4 max-w-3xl mx-auto">
             <h2 className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent font-extrabold text-4xl sm:text-4xl lg:text-5xl font-semibold text-center md:text-left">
-                Driven by Creativity
+                {t('about.title')}
             </h2>
             <p className="text-gray-200 mt-4 text-md sm:text-base lg:text-lg leading-relaxed text-center md:text-left">
-                I want to start a <span className="text-cyan-200">new career</span> dedicated to the
-                <span className="text-cyan-200"> creativity </span> that comes from starting a
-                <span className="text-cyan-200"> new project </span> and developing it until I see it
-                <span className="text-cyan-200"> deployed and working </span>, aware that there are always things to learn and improve.
-                <span className="block h-4"></span>
-                Looking for constant <span className="text-cyan-200"> professional and personal growth </span> that keeps me
-                <span className="text-cyan-200"> motivated </span> to
-                <span className="text-cyan-200"> improve myself </span> both individually and as a couple day by day.
+                {t('about.description.part1')} <span className="text-cyan-200">{t('about.highlights.newCareer')}</span>{' '}
+                {t('about.description.part2')} <span className="text-cyan-200">{t('about.highlights.creativity')}</span>{' '}
+                {t('about.description.part3')} <span className="text-cyan-200">{t('about.highlights.newProject')}</span>{' '}
+                {t('about.description.part4')} <span className="text-cyan-200">{t('about.highlights.deployed')}</span>{' '}
+                {t('about.description.part5')} <span className="block h-4"></span>
+                {t('about.description.part6')} <span className="text-cyan-200">{t('about.highlights.growth')}</span>{' '}
+                {t('about.description.part7')} <span className="text-cyan-200">{t('about.highlights.motivation')}</span>{' '}
+                {t('about.description.part8')} <span className="text-cyan-200">{t('about.highlights.improvement')}</span>{' '}
+                {t('about.description.part9')}
             </p>
         </section>
     );

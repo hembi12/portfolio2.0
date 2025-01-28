@@ -1,0 +1,49 @@
+{
+    "home": "Inicio",
+    "aboutdock": "Sobre Mí",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contáctame",
+    "workExperience": "Experiencia Laboral",
+    "education": "Educación",
+    "changeLanguage": "Cambiar Idioma",
+    "languageChanged": "Idioma cambiado a Español",
+    "header": {
+        "greeting": "Hola, soy",
+        "roles": ["Héctor", "Martil"],
+        "description": {
+            "part1": "convertido en",
+            "part2": "Apasionado por la programación que se sienta frente a sus monitores todos los días para",
+            "part3": "y mejorar."
+        },
+        "roleHighlights": {
+            "customerService": "Experto en atención al cliente",
+            "fullStack": "desarrollador full-stack.",
+            "learnNew": "aprender algo nuevo"
+        },
+        "profileAlt": "Foto de perfil"
+    },
+    "about": {
+        "title": "Impulsado por la Creatividad",
+        "description": {
+            "part1": "Quiero comenzar una",
+            "part2": "dedicada a la",
+            "part3": "que surge de iniciar un",
+            "part4": "y desarrollarlo hasta que lo vea",
+            "part5": "consciente de que siempre hay cosas que aprender y mejorar.",
+            "part6": "Buscando un constante",
+            "part7": "que me mantenga",
+            "part8": "para",
+            "part9": "tanto individualmente como en pareja día a día."
+        },
+        "highlights": {
+            "newCareer": "nueva carrera",
+            "creativity": "creatividad",
+            "newProject": "nuevo proyecto",
+            "deployed": "desplegado y funcionando",
+            "growth": "crecimiento profesional y personal",
+            "motivation": "motivado",
+            "improvement": "mejorarme"
+        }
+    }
+}

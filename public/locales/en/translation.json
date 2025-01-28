@@ -1,0 +1,49 @@
+{
+    "home": "Home",
+    "aboutdock": "About Me",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact Me",
+    "workExperience": "Work Experience",
+    "education": "Education",
+    "changeLanguage": "Change Language",
+    "languageChanged": "Language changed to English",
+    "header": {
+        "greeting": "Hi, I'm",
+        "roles": ["Héctor", "Martil"],
+        "description": {
+            "part1": "turned",
+            "part2": "developer. Passionate about programming who sits in front of his monitors every day to",
+            "part3": "and improve."
+        },
+        "roleHighlights": {
+            "customerService": "Customer service expert",
+            "fullStack": "full-stack developer",
+            "learnNew": "learn something new"
+        },
+        "profileAlt": "Profile picture"
+    },
+    "about": {
+        "title": "Driven by Creativity",
+        "description": {
+            "part1": "I want to start a",
+            "part2": "dedicated to the",
+            "part3": "that comes from starting a",
+            "part4": "and developing it until I see it",
+            "part5": "aware that there are always things to learn and improve.",
+            "part6": "Looking for constant",
+            "part7": "that keeps me",
+            "part8": "to",
+            "part9": "both individually and as a couple day by day."
+        },
+        "highlights": {
+            "newCareer": "new career",
+            "creativity": "creativity",
+            "newProject": "new project",
+            "deployed": "deployed and working",
+            "growth": "professional and personal growth",
+            "motivation": "motivated",
+            "improvement": "improve myself"
+        }
+    }
+}

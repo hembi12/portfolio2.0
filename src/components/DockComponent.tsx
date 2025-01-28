@@ -4,6 +4,8 @@ import { Dock, DockIcon } from './ui/dock';
 import { HomeIcon, SmileIcon, BriefcaseIcon, GraduationCapIcon, CodeIcon, ZapIcon, MailIcon, GlobeIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import * as Tooltip from '@radix-ui/react-tooltip';
+import { toast, ToastContainer, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 type DockItemType = {
     href?: string;
@@ -72,7 +74,7 @@ const DockItem: React.FC<{
 
 const DockComponent: React.FC = () => {
     const mouseX = useMotionValue(Infinity);
-    const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation();
     const [dockConfig, setDockConfig] = useState({
         size: 40,
         magnification: 60,
@@ -100,26 +102,49 @@ const DockComponent: React.FC = () => {
     const handleLanguageChange = () => {
         const newLang = i18n.language === 'en' ? 'es' : 'en';
         i18n.changeLanguage(newLang);
-        alert(`Language changed to ${newLang === 'en' ? 'English' : 'Español'}`);
+        localStorage.setItem('i18nextLng', newLang); // Guarda el idioma en localStorage
+
+        toast.success(t('languageChanged'), {
+            position: 'top-center', // Notificación en la parte superior
+            autoClose: 3000, // Se cierra en 3 segundos
+            hideProgressBar: false, // Ocultar barra de progreso
+            closeOnClick: true, // Cerrar al hacer clic
+            pauseOnHover: false, // No pausar al pasar el mouse
+            draggable: true, // Permitir arrastrar la notificación
+            theme: 'dark', // Tema oscuro
+            transition: Slide, // Animación Slide
+        });
     };
 
     const dockItems: DockItemType[] = [
-        { href: '#header', icon: HomeIcon, label: 'Home' },
-        { href: '#about', icon: SmileIcon, label: 'About me' },
-        { href: '#projects', icon: CodeIcon, label: 'Projects' },
-        { href: '#skills', icon: ZapIcon, label: 'Skills' },
-        { href: '#contact', icon: MailIcon, label: 'Contact me' },
-        { href: '#work-experience', icon: BriefcaseIcon, label: 'Work Experience' },
-        { href: '#education', icon: GraduationCapIcon, label: 'Education' },
+        { href: '#header', icon: HomeIcon, label: t('home') },
+        { href: '#about', icon: SmileIcon, label: t('aboutdock') },
+        { href: '#projects', icon: CodeIcon, label: t('projects') },
+        { href: '#skills', icon: ZapIcon, label: t('skills') },
+        { href: '#contact', icon: MailIcon, label: t('contact') },
+        { href: '#work-experience', icon: BriefcaseIcon, label: t('workExperience') },
+        { href: '#education', icon: GraduationCapIcon, label: t('education') },
         {
             icon: GlobeIcon,
-            label: 'Change Language',
-            onClick: handleLanguageChange, // Acción para cambiar el idioma
+            label: t('changeLanguage'),
+            onClick: handleLanguageChange,
         },
     ];
 
     return (
         <Tooltip.Provider>
+            {/* 🎨 Contenedor Personalizado para las Notificaciones */}
+            <ToastContainer
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar
+                closeOnClick
+                pauseOnHover={false}
+                draggable
+                theme="dark"
+                transition={Slide}
+            />
+
             <Dock
                 className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 
                 bg-black font-bold rounded-lg shadow-lg p-2"
