@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                         href="https://github.com/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-cyan-200 hover:text-cyan-50 transition"
+                        className="text-cyan-200 hover:text-cyan-50 hover:underline transition"
                     >
                         GitHub
                     </a>
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                         href="https://linkedin.com/in/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-cyan-200 hover:text-cyan-50 transition"
+                        className="text-cyan-200 hover:text-cyan-50 hover:underline transition"
                     >
                         LinkedIn
                     </a>
