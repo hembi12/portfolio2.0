@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Marquee } from "@/components/ui/marquee";
-import { FaUserCircle, FaCheckCircle, FaComment, FaRetweet, FaHeart, FaShare } from "react-icons/fa";
+import { FaUserCircle, FaCheckCircle, FaComment, FaRetweet, FaHeart, FaShare, FaEllipsisH } from "react-icons/fa";
 
 interface Interest {
     name: string;
@@ -27,28 +27,31 @@ const interests: Interest[] = [
 
 const InterestCard: React.FC<Interest> = ({ name, username, text, verified, time }) => {
     return (
-        <figure className="w-80 p-4 rounded-xl bg-white shadow-md hover:bg-gray-100 border border-gray-200">
-            <div className="flex items-center gap-3">
-                <FaUserCircle className="text-gray-600" size={40} />
-                <div>
-                    <figcaption className="text-md font-semibold text-gray-800 flex items-center gap-1">
-                        {name}
-                        {verified && (
-                            <FaCheckCircle
-                                className={verified === "blue" ? "text-blue-500" : "text-yellow-500"}
-                                size={16}
-                            />
-                        )}
-                    </figcaption>
-                    <p className="text-sm text-gray-700">{username} · <span className="text-gray-500">{time}</span></p>
+        <figure className="w-80 p-4 rounded-xl bg-white shadow-md hover:bg-gray-100 border border-gray-200 font-sans">
+            <div className="flex justify-between items-center">
+                <div className="flex items-center gap-3">
+                    <FaUserCircle className="text-gray-600" size={40} />
+                    <div>
+                        <figcaption className="text-md font-bold text-gray-900 flex items-center gap-1">
+                            {name}
+                            {verified && (
+                                <FaCheckCircle
+                                    className={verified === "blue" ? "text-blue-500" : "text-yellow-500"}
+                                    size={16}
+                                />
+                            )}
+                        </figcaption>
+                        <p className="text-sm text-gray-500">{username} · <span className="text-gray-400">{time}</span></p>
+                    </div>
                 </div>
+                <FaEllipsisH className="text-gray-500 cursor-pointer" />
             </div>
-            <p className="text-sm text-gray-600 mt-2">{text}</p>
+            <p className="text-sm text-gray-800 mt-2 leading-relaxed">{text}</p>
             <div className="flex justify-between text-gray-500 text-sm mt-3">
-                <FaComment />
-                <FaRetweet />
-                <FaHeart />
-                <FaShare />
+                <FaComment size={14} className="cursor-pointer hover:text-gray-700" />
+                <FaRetweet size={14} className="cursor-pointer hover:text-green-600" />
+                <FaHeart size={14} className="cursor-pointer hover:text-red-500" />
+                <FaShare size={14} className="cursor-pointer hover:text-gray-700" />
             </div>
         </figure>
     );
