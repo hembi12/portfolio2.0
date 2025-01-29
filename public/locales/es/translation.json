@@ -10,7 +10,10 @@
     "languageChanged": "Idioma cambiado a Español",
     "header": {
         "greeting": "Hola, soy",
-        "roles": ["Héctor", "Martil"],
+        "roles": [
+            "Héctor",
+            "Martil"
+        ],
         "description": {
             "part1": "convertido en",
             "part2": "Apasionado por la programación que se sienta frente a sus monitores todos los días para",
@@ -24,26 +27,27 @@
         "profileAlt": "Foto de perfil"
     },
     "about": {
-        "title": "Impulsado por la Creatividad",
+        "title": "Sobre Mí",
         "description": {
-            "part1": "Quiero comenzar una",
-            "part2": "dedicada a la",
-            "part3": "que surge de iniciar un",
-            "part4": "y desarrollarlo hasta que lo vea",
-            "part5": "consciente de que siempre hay cosas que aprender y mejorar.",
-            "part6": "Buscando un constante",
-            "part7": "que me mantenga",
-            "part8": "para",
-            "part9": "tanto individualmente como en pareja día a día."
+            "part1": "Inicié mi trayectoria en",
+            "part2": "buscando oportunidades para crecer e innovar.",
+            "part3": "Apasionado por",
+            "part4": "incorporar creatividad en mi trabajo.",
+            "part5": "Con cada",
+            "part6": "nuevo proyecto, aprendo y mejoro.",
+            "part7": "Cada despliegue me recuerda",
+            "part8": "lo lejos que he llegado.",
+            "part9": "El crecimiento y la motivación",
+            "part10": "me impulsan a seguir aprendiendo y evolucionando."
         },
         "highlights": {
-            "newCareer": "nueva carrera",
-            "creativity": "creatividad",
+            "newCareer": "esta carrera,",
+            "creativity": "la creatividad,",
             "newProject": "nuevo proyecto",
-            "deployed": "desplegado y funcionando",
-            "growth": "crecimiento profesional y personal",
-            "motivation": "motivado",
-            "improvement": "mejorarme"
+            "deployed": "proyecto desplegado",
+            "growth": "el crecimiento,",
+            "motivation": "la motivación,",
+            "improvement": "la superación personal"
         }
     },
     "projects": {

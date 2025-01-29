@@ -10,7 +10,10 @@
     "languageChanged": "Language changed to English",
     "header": {
         "greeting": "Hi, I'm",
-        "roles": ["Héctor", "Martil"],
+        "roles": [
+            "Héctor",
+            "Martil"
+        ],
         "description": {
             "part1": "turned",
             "part2": "developer. Passionate about programming who sits in front of his monitors every day to",
@@ -24,26 +27,27 @@
         "profileAlt": "Profile picture"
     },
     "about": {
-        "title": "Driven by Creativity",
+        "title": "About Me",
         "description": {
-            "part1": "I want to start a",
-            "part2": "dedicated to the",
-            "part3": "that comes from starting a",
-            "part4": "and developing it until I see it",
-            "part5": "aware that there are always things to learn and improve.",
-            "part6": "Looking for constant",
-            "part7": "that keeps me",
-            "part8": "to",
-            "part9": "both individually and as a couple day by day."
+            "part1": "I started my journey in",
+            "part2": "seeking opportunities to grow and innovate.",
+            "part3": "Passionate about",
+            "part4": "bringing creativity into my work.",
+            "part5": "With each",
+            "part6": "new project, I learn and improve.",
+            "part7": "Every deployment reminds me",
+            "part8": "how far I've come.",
+            "part9": "Growth and motivation",
+            "part10": "drive me to keep learning and evolving."
         },
         "highlights": {
-            "newCareer": "new career",
-            "creativity": "creativity",
+            "newCareer": "this career,",
+            "creativity": "creativity,",
             "newProject": "new project",
-            "deployed": "deployed and working",
-            "growth": "professional and personal growth",
-            "motivation": "motivated",
-            "improvement": "improve myself"
+            "deployed": "deployed project",
+            "growth": "growth,",
+            "motivation": "motivation,",
+            "improvement": "self-improvement"
         }
     },
     "projects": {
