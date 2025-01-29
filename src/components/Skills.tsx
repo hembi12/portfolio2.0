@@ -35,25 +35,26 @@ export const Skills: React.FC = () => {
 
                 {/* Órbita principal */}
                 <OrbitingCircles radius={150} speed={1}>
-                    <FaHtml5 color="#F27A55" size={50} />
-                    <FaCss3Alt color="#4A95D1" size={50} />
-                    <SiJavascript color="#FAE956" size={50} />
-                    <SiTypescript color="#3178C6" size={50} />
-                    <FaReact color="#89E4FD" size={50} />
-                    <SiTailwindcss color="#3ECDE3" size={50} />
-                    <SiBootstrap color="#9A72E3" size={50} />
+                    <FaHtml5 color="#FF5733" size={50} />
+                    <FaCss3Alt color="#2965F1" size={50} />
+                    <SiJavascript color="#F7DF1E" size={50} />
+                    <SiTypescript color="#007ACC" size={50} />
+                    <FaReact color="#61DAFB" size={50} />
+                    <SiTailwindcss color="#38BDF8" size={50} />
+                    <SiBootstrap color="#A855F7" size={50} />
                     <SiExpress color="#ffffff" size={50} />
                 </OrbitingCircles>
 
+
                 {/* Órbita secundaria */}
                 <OrbitingCircles radius={100} reverse speed={1}>
-                    <BiLogoVisualStudio color="#4DA4E1" size={60} />
-                    <SiVite color="#7AC7FF" size={60} />
-                    <FaGitAlt color="#F05032" size={60} />
+                    <BiLogoVisualStudio color="#0078D7" size={60} />
+                    <SiVite color="#A855F7" size={60} />
+                    <FaGitAlt color="#F14E32" size={60} />
                     <FaGithub color="#ffffff" size={60} />
-                    <IoLogoFirebase color="#FFD761" size={60} />
+                    <IoLogoFirebase color="#FFA000" size={60} />
                     <SiVercel color="#ffffff" size={60} />
-                    <FaNodeJs color="#66B266" size={50} />
+                    <FaNodeJs color="#3C873A" size={50} />
                     <SiOpenai color="#ffffff" size={50} />
                 </OrbitingCircles>
             </div>

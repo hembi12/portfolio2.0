@@ -21,8 +21,7 @@ const certificates = [
     {
         title: 'International Diploma in Computer Systems Analysis',
         issuer: 'Universidad Tecnológica Latinoamericana en Línea',
-        date: 'January 27, 2025',
-        description: 'Understand the tools and technologies used for information management in companies, considering the areas of programming and database design, in order to improve decision-making and increase the efficiency and profitability of business processes.',
+        date: 'January 2025',
         logo: UtelLogo,
         link: '/src/assets/010439887.DPLO.313614.DPL2025-384081.pdf', // Link al archivo PDF
     },
@@ -83,7 +82,6 @@ const Education: React.FC = () => {
                             </h3>
                             <p className="text-gray-300 text-md sm:text-base">{cert.issuer}</p>
                             <p className="text-gray-400 text-md sm:text-base">{cert.date}</p>
-                            <p className="text-gray-400 text-sm sm:text-base">{cert.description}</p>
                         </div>
                     </li>
                 ))}

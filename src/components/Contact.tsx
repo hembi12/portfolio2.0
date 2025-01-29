@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Importar Link de react-router-dom
 
 interface ContactProps {
-    onShowPrivacyPolicy: () => void; // Prop para mostrar la política de privacidad
+    onShowPrivacyPolicy?: () => void; // Prop opcional en caso de que se necesite lógica adicional
 }
 
-const Contact: React.FC<ContactProps> = ({ onShowPrivacyPolicy }) => {
+const Contact: React.FC<ContactProps> = () => {
     const formEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 
     const [formErrors, setFormErrors] = useState({
@@ -86,7 +87,7 @@ const Contact: React.FC<ContactProps> = ({ onShowPrivacyPolicy }) => {
     };
 
     return (
-        <section className="my-12 px-4 max-w-3xl mx-auto text-center md:text-left">
+        <section id="contact" className="my-12 px-4 max-w-3xl mx-auto text-center md:text-left">
             <h2 className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent text-4xl sm:text-4xl lg:text-5xl font-semibold mb-4">
                 Get in Touch!
             </h2>
@@ -183,13 +184,12 @@ const Contact: React.FC<ContactProps> = ({ onShowPrivacyPolicy }) => {
                         className="ml-2 text-gray-200 text-sm"
                     >
                         I agree to the{" "}
-                        <button
-                            type="button"
-                            onClick={onShowPrivacyPolicy} // Usar la prop para cambiar a la Política de Privacidad
+                        <Link
+                            to="/privacy-policy" // Navega a la página de Política de Privacidad
                             className="text-cyan-200 hover:text-cyan-50 hover:underline transition"
                         >
                             Privacy Policy
-                        </button>
+                        </Link>
                     </label>
                 </div>
                 {formErrors.privacy && (

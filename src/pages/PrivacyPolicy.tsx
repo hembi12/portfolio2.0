@@ -10,6 +10,16 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onBackToPortfolio }) => {
         window.scrollTo(0, 0);
     }, []);
 
+    const handleBackClick = () => {
+        onBackToPortfolio(); // Navega a la página principal
+        setTimeout(() => {
+            const contactSection = document.getElementById("contact");
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 100); // Un pequeño retraso para asegurar que la navegación se complete antes del scroll
+    };
+
     return (
         <section className="max-w-3xl mx-auto my-12 px-4 text-gray-200">
             <h1 className="text-4xl font-bold mb-6">Política de Privacidad</h1>
@@ -69,8 +79,8 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onBackToPortfolio }) => {
             <p>Si tienes preguntas sobre esta política de privacidad, contáctanos en <strong>[tu correo]</strong>.</p>
 
             <div className="text-center mt-4 mb-6">
-                <button
-                    onClick={onBackToPortfolio}
+            <button
+                    onClick={handleBackClick} // Usa la nueva función que maneja la navegación y el scroll
                     className="text-cyan-200 hover:text-cyan-50 hover:underline transition"
                 >
                     Volver al Portafolio
