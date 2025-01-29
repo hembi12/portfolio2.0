@@ -6,7 +6,7 @@ import WorkExperience from "./components/WorkExperience";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import Contact from "./components/contact/Contact";
 import DockComponent from "./components/DockComponent";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -58,9 +58,9 @@ const App: React.FC = () => {
 
 // Componente que pasa la prop correctamente
 const PrivacyPolicyWrapper: React.FC = () => {
-  const navigate = useNavigate(); // Hook para navegar
+    const navigate = useNavigate(); // Hook para navegar
 
-  return <PrivacyPolicy onBackToPortfolio={() => navigate("/#contact")} />;
+    return <PrivacyPolicy onBackToPortfolio={() => navigate("/#contact")} />;
 };
 
 export default App;
