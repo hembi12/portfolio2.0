@@ -1,8 +1,8 @@
 {
     "home": "Home",
     "aboutdock": "About Me",
-    "projects": "Projects",
-    "skills": "Skills",
+    "projectsdock": "Projects",
+    "skillsdock": "Skills",
     "contact": "Contact Me",
     "workExperience": "Work Experience",
     "education": "Education",
@@ -44,6 +44,63 @@
             "growth": "professional and personal growth",
             "motivation": "motivated",
             "improvement": "improve myself"
+        }
+    },
+    "projects": {
+        "title": "Built from Scratch",
+        "description": {
+            "part1": "I have",
+            "built": "built",
+            "part2": "these projects from",
+            "scratch": "scratch",
+            "part3": "applying the",
+            "knowledge": "knowledge",
+            "part4": "and",
+            "skills": "skills",
+            "part5": "I’ve gained through my dedicated learning of various",
+            "technologies": "technologies",
+            "tools": "tools"
+        },
+        "portfolioV1": {
+            "title": "Portfolio V1",
+            "description": "I developed the first version of my portfolio website to showcase my skills, projects, and experience."
+        },
+        "landingPage": {
+            "title": "Landing Page",
+            "description": "I developed an interactive landing page mockup focused on optimizing the presentation of key elements."
+        },
+        "birthdayInvitation": {
+            "title": "Birthday Invitation",
+            "description": "I created an interactive invitation page for my birthday celebration with an RSVP form."
+        },
+        "dentalClinic": {
+            "title": "Dental Clinic Website",
+            "description": "I designed a mockup for a dental clinic website, including a clear call to action for scheduling appointments."
+        },
+        "buttons": {
+            "website": "Website",
+            "code": "Code"
+        }
+    },
+    "skills": {
+        "title": "Skills & Technologies",
+        "description": {
+            "part1": "I am",
+            "part2": "to continuously growing my",
+            "part3": "and delivering",
+            "part4": "I am eager to bring my",
+            "part5": "to a",
+            "part6": "where I can contribute to building",
+            "part7": "while continuing to grow as a"
+        },
+        "highlights": {
+            "dedicated": "dedicated",
+            "expertise": "expertise",
+            "impactfulSolutions": "impactful solutions",
+            "skills": "skills",
+            "collaborativeTeam": "collaborative team",
+            "exceptionalProjects": "exceptional projects",
+            "developer": "developer"
         }
     }
 }

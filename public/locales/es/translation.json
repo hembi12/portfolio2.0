@@ -1,8 +1,8 @@
 {
     "home": "Inicio",
     "aboutdock": "Sobre Mí",
-    "projects": "Proyectos",
-    "skills": "Habilidades",
+    "projectsdock": "Proyectos",
+    "skillsdock": "Habilidades",
     "contact": "Contáctame",
     "workExperience": "Experiencia Laboral",
     "education": "Educación",
@@ -44,6 +44,63 @@
             "growth": "crecimiento profesional y personal",
             "motivation": "motivado",
             "improvement": "mejorarme"
+        }
+    },
+    "projects": {
+        "title": "Construido desde Cero",
+        "description": {
+            "part1": "He",
+            "built": "construido",
+            "part2": "estos proyectos desde",
+            "scratch": "cero",
+            "part3": "aplicando los",
+            "knowledge": "conocimientos",
+            "part4": "y",
+            "skills": "habilidades",
+            "part5": "que he adquirido a través de mi aprendizaje dedicado de diversas",
+            "technologies": "tecnologías",
+            "tools": "herramientas"
+        },
+        "portfolioV1": {
+            "title": "Portafolio V1",
+            "description": "Desarrollé la primera versión de mi portafolio para mostrar mis habilidades, proyectos y experiencia."
+        },
+        "landingPage": {
+            "title": "Landing Page",
+            "description": "Desarrollé un mockup de landing page interactiva optimizando la presentación de elementos clave."
+        },
+        "birthdayInvitation": {
+            "title": "Cumpleaños 30",
+            "description": "Creé una invitación interactiva para mi cumpleaños con un formulario RSVP."
+        },
+        "dentalClinic": {
+            "title": "Clínica Dental",
+            "description": "Diseñé un mockup para el sitio web de una clínica dental, con un llamado claro a agendar citas."
+        },
+        "buttons": {
+            "website": "Sitio Web",
+            "code": "Código"
+        }
+    },
+    "skills": {
+        "title": "Habilidades y Tecnologías",
+        "description": {
+            "part1": "Estoy",
+            "part2": "en seguir desarrollando mi",
+            "part3": "y entregando",
+            "part4": "Estoy ansioso por llevar mis",
+            "part5": "a un",
+            "part6": "donde pueda contribuir a construir",
+            "part7": "mientras sigo creciendo como"
+        },
+        "highlights": {
+            "dedicated": "dedicación",
+            "expertise": "experiencia",
+            "impactfulSolutions": "soluciones impactantes",
+            "skills": "habilidades",
+            "collaborativeTeam": "equipo colaborativo",
+            "exceptionalProjects": "proyectos excepcionales",
+            "developer": "desarrollador"
         }
     }
 }

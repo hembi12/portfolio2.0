@@ -119,8 +119,8 @@ const DockComponent: React.FC = () => {
     const dockItems: DockItemType[] = [
         { href: '#header', icon: HomeIcon, label: t('home') },
         { href: '#about', icon: SmileIcon, label: t('aboutdock') },
-        { href: '#projects', icon: CodeIcon, label: t('projects') },
-        { href: '#skills', icon: ZapIcon, label: t('skills') },
+        { href: '#projects', icon: CodeIcon, label: t('projectsdock') },
+        { href: '#skills', icon: ZapIcon, label: t('skillsdock') },
         { href: '#contact', icon: MailIcon, label: t('contact') },
         { href: '#work-experience', icon: BriefcaseIcon, label: t('workExperience') },
         { href: '#education', icon: GraduationCapIcon, label: t('education') },
@@ -147,7 +147,7 @@ const DockComponent: React.FC = () => {
 
             <Dock
                 className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 
-                bg-black font-bold rounded-lg shadow-lg p-2"
+                bg-black font-semibold rounded-lg shadow-lg p-2"
                 iconSize={dockConfig.size}
                 iconMagnification={dockConfig.magnification}
                 iconDistance={dockConfig.distance}

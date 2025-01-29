@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { OrbitingCircles } from '@/components/ui/orbiting-circles'; // Asegúrate de que esta ruta sea correcta
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub } from 'react-icons/fa';
 import { SiTypescript, SiJavascript, SiTailwindcss, SiBootstrap, SiOpenai, SiVite, SiExpress, SiVercel } from 'react-icons/si';
@@ -6,17 +7,24 @@ import { BiLogoVisualStudio } from "react-icons/bi";
 import { IoLogoFirebase } from "react-icons/io5";
 
 export const Skills: React.FC = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="my-8 px-4 max-w-3xl mx-auto">
             {/* Título */}
             <h2 className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent font-extrabold text-4xl sm:text-4xl lg:text-5xl font-semibold text-center md:text-left">
-                Skills & Technologies
+                {t('skills.title')}
             </h2>
 
             {/* Descripción */}
             <p className="text-gray-200 mt-4 text-md sm:text-base lg:text-lg leading-relaxed text-center md:text-left">
-                I am <span className="text-cyan-200">dedicated</span> to continuously growing my <span className="text-cyan-200">expertise</span> and delivering <span className="text-cyan-200">impactful solutions</span>.
-                I am eager to bring my <span className="text-cyan-200">skills</span> to a <span className="text-cyan-200">collaborative team</span>, where I can contribute to building <span className="text-cyan-200">exceptional projects</span> while continuing to grow as a <span className="text-cyan-200">developer</span>.
+                {t('skills.description.part1')} <span className="text-cyan-200">{t('skills.highlights.dedicated')}</span>{' '}
+                {t('skills.description.part2')} <span className="text-cyan-200">{t('skills.highlights.expertise')}</span>{' '}
+                {t('skills.description.part3')} <span className="text-cyan-200">{t('skills.highlights.impactfulSolutions')}</span>.{' '}
+                {t('skills.description.part4')} <span className="text-cyan-200">{t('skills.highlights.skills')}</span>{' '}
+                {t('skills.description.part5')} <span className="text-cyan-200">{t('skills.highlights.collaborativeTeam')}</span>{' '}
+                {t('skills.description.part6')} <span className="text-cyan-200">{t('skills.highlights.exceptionalProjects')}</span>{' '}
+                {t('skills.description.part7')} <span className="text-cyan-200">{t('skills.highlights.developer')}</span>.
             </p>
 
             {/* Orbiting Circles */}
