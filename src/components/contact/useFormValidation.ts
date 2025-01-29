@@ -1,51 +1,44 @@
 // components/Contact/useFormValidation.ts
-import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as Yup from "yup";
 
-interface FormErrors {
+// Definir la estructura del formulario con TypeScript
+export interface FormData {
     name: string;
     email: string;
     subject: string;
     message: string;
-    privacy: string;
+    privacy: boolean;
 }
 
-export const useFormValidation = (privacyChecked: boolean) => {
-    const [formErrors, setFormErrors] = useState<FormErrors>({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-        privacy: "",
+// Esquema de validación con Yup (debe coincidir con FormData)
+const validationSchema = Yup.object({
+    name: Yup.string()
+        .min(3, "Name must be at least 3 characters.")
+        .required("Name is required."),
+    email: Yup.string()
+        .email("Invalid email address")
+        .required("Email is required."),
+    subject: Yup.string()
+        .required("Please select a subject."),
+    message: Yup.string()
+        .min(10, "Message must be at least 10 characters.")
+        .required("Message is required."),
+    privacy: Yup.boolean()
+        .oneOf([true], "You must agree to the Privacy Policy.")
+        .required(),
+}).required(); // 👈 Se agrega `.required()` para evitar errores de inferencia
+
+export const useFormValidation = () => {
+    return useForm<FormData>({
+        resolver: yupResolver(validationSchema as Yup.ObjectSchema<FormData>), // 👈 Se tipa correctamente sin `any`
+        defaultValues: {
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+            privacy: false,
+        },
     });
-
-    const validateForm = (formData: FormData): boolean => {
-        const errors: FormErrors = { name: "", email: "", subject: "", message: "", privacy: "" };
-
-        if (!formData.get("name") || formData.get("name")!.toString().trim().length < 3) {
-            errors.name = "Name must be at least 3 characters.";
-        }
-
-        const email = formData.get("email") as string;
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email || !emailRegex.test(email)) {
-            errors.email = "Please enter a valid email address.";
-        }
-
-        if (!formData.get("subject")) {
-            errors.subject = "Please select a subject.";
-        }
-
-        if (!formData.get("message") || formData.get("message")!.toString().trim().length < 10) {
-            errors.message = "Message must be at least 10 characters.";
-        }
-
-        if (!privacyChecked) {
-            errors.privacy = "You must agree to the Privacy Policy.";
-        }
-
-        setFormErrors(errors);
-        return !Object.values(errors).some((error) => error !== "");
-    };
-
-    return { formErrors, validateForm };
 };
