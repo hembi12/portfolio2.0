@@ -26,27 +26,27 @@
         },
         "profileAlt": "Foto de perfil"
     },
-        "loading": "Cargando traducciones...",
-        "about": {
-            "title": "Más Allá del Código: Quién Soy",
-            "description": "Mis pasiones impulsan mi creatividad, moldeando cómo construyo y resuelvo. Tecnología, música, viajes. Todo inspira mi trabajo."
-        },
-        "interests": {
-            "F1Fan": "La F1 es velocidad, estrategia y pura adrenalina. Cada carrera es un espectáculo de tecnología e intensidad. 🏁 🏎️",
-            "MyFriends": "Nada como las risas, los momentos y las locuras con amigos. Siempre hacen la vida más divertida. 🥳 🎮",
-            "MusicAddict": "La música siempre está ahí: inspira, motiva y te acompaña en cada momento. No hay vida sin un buen soundtrack. 🎵 🎸",
-            "CatLover": "Los gatos son puro flow: independientes, cariñosos y con más personalidad que muchos humanos. 😺 🐈‍⬛",
-            "TARS": "*Interstellar* es arte: ciencia, emociones y una banda sonora que te deja viajando por el tiempo. 🚀 🪐",
-            "InLove": "Tener a alguien especial es lo mejor: amor, apoyo y momentos únicos que hacen todo más bonito. 💕 😍",
-            "WanderLust": "Viajar es la mejor inversión: descubres, aprendes y creas recuerdos que duran para siempre. ✈️ 🏖️",
-            "CoderLife": "Ser dev es convertir ideas en realidad. Código, café y muchas noches en vela solucionando bugs. 🤖 💾",
-            "ZeroMiedo": "La lucha libre es pura pasión. Héroes, villanos y el espectáculo que siempre deja con la piel de gallina. 💪 🔥",
-            "FamilyFirst": "La familia lo es todo: amor, risas, apoyo incondicional y una buena comida casera siempre. 🏆 ❤️",
-            "TopFood": "La comida mexicana es otro nivel: tacos, mole, pozole y ese toquecito de picante que lo hace perfecto. 🌶️ 🇲🇽"
-        },
-        "projects": {
-            "title": "De Cero a la Implementación",
-            "description": "Transformo ideas en experiencias web atractivas, funcionales y responsivas, combinando creatividad, tecnología y buenas prácticas.",
+    "loading": "Cargando traducciones...",
+    "about": {
+        "title": "Más Allá del Código: Quién Soy",
+        "description": "Mis pasiones impulsan mi creatividad, moldeando cómo construyo y resuelvo. Tecnología, música, viajes. Todo inspira mi trabajo."
+    },
+    "interests": {
+        "F1Fan": "La F1 es velocidad, estrategia y pura adrenalina. Cada carrera es un espectáculo de tecnología e intensidad. 🏁 🏎️",
+        "MyFriends": "Nada como las risas, los momentos y las locuras con amigos. Siempre hacen la vida más divertida. 🥳 🎮",
+        "MusicAddict": "La música siempre está ahí: inspira, motiva y te acompaña en cada momento. No hay vida sin un buen soundtrack. 🎵 🎸",
+        "CatLover": "Los gatos son puro flow: independientes, cariñosos y con más personalidad que muchos humanos. 😺 🐈‍⬛",
+        "TARS": "*Interstellar* es arte: ciencia, emociones y una banda sonora que te deja viajando por el tiempo. 🚀 🪐",
+        "InLove": "Tener a alguien especial es lo mejor: amor, apoyo y momentos únicos que hacen todo más bonito. 💕 😍",
+        "WanderLust": "Viajar es la mejor inversión: descubres, aprendes y creas recuerdos que duran para siempre. ✈️ 🏖️",
+        "CoderLife": "Ser dev es convertir ideas en realidad. Código, café y muchas noches en vela solucionando bugs. 🤖 💾",
+        "ZeroMiedo": "La lucha libre es pura pasión. Héroes, villanos y el espectáculo que siempre deja con la piel de gallina. 💪 🔥",
+        "FamilyFirst": "La familia lo es todo: amor, risas, apoyo incondicional y una buena comida casera siempre. 🏆 ❤️",
+        "TopFood": "La comida mexicana es otro nivel: tacos, mole, pozole y ese toquecito de picante que lo hace perfecto. 🌶️ 🇲🇽"
+    },
+    "projects": {
+        "title": "De Cero a la Implementación",
+        "description": "Transformo ideas en experiencias web atractivas, funcionales y responsivas, combinando creatividad, tecnología y buenas prácticas.",
         "portfolioV1": {
             "title": "Portafolio V1",
             "description": "Desarrollé la primera versión de mi portafolio para mostrar mis habilidades, proyectos y experiencia."
@@ -70,23 +70,6 @@
     },
     "skills": {
         "title": "Habilidades y Tecnologías",
-        "description": {
-            "part1": "Estoy",
-            "part2": "en seguir desarrollando mi",
-            "part3": "y entregando",
-            "part4": "Estoy emocionado por llevar mis",
-            "part5": "a un",
-            "part6": "donde pueda contribuir a construir",
-            "part7": "mientras sigo creciendo como"
-        },
-        "highlights": {
-            "dedicated": "dedicado",
-            "expertise": "experiencia",
-            "impactfulSolutions": "soluciones impactantes",
-            "skills": "habilidades",
-            "collaborativeTeam": "equipo colaborativo",
-            "exceptionalProjects": "proyectos excepcionales",
-            "developer": "desarrollador"
-        }
+        "description": "Me especializo en tecnologías modernas de desarrollo web, creando soluciones escalables, eficientes y responsivas con las mejores herramientas del sector."
     }
 }

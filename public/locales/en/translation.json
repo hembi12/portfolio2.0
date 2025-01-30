@@ -47,46 +47,29 @@
     "projects": {
         "title": "From Zero to Implementation",
         "description": "I turn ideas into attractive, functional, and responsive web experiences, combining creativity, technology, and best practices.",
-    "portfolioV1": {
-        "title": "Portfolio V1",
-        "description": "I developed the first version of my portfolio website to showcase my skills, projects, and experience."
+        "portfolioV1": {
+            "title": "Portfolio V1",
+            "description": "I developed the first version of my portfolio website to showcase my skills, projects, and experience."
+        },
+        "landingPage": {
+            "title": "Landing Page",
+            "description": "I developed an interactive landing page mockup focused on optimizing the presentation of key elements."
+        },
+        "birthdayInvitation": {
+            "title": "Birthday Invitation",
+            "description": "I created an interactive invitation page for my birthday celebration with an RSVP form."
+        },
+        "dentalClinic": {
+            "title": "Dental Clinic Website",
+            "description": "I designed a mockup for a dental clinic website, including a clear call to action for scheduling appointments."
+        },
+        "buttons": {
+            "website": "Website",
+            "code": "Code"
+        }
     },
-    "landingPage": {
-        "title": "Landing Page",
-        "description": "I developed an interactive landing page mockup focused on optimizing the presentation of key elements."
-    },
-    "birthdayInvitation": {
-        "title": "Birthday Invitation",
-        "description": "I created an interactive invitation page for my birthday celebration with an RSVP form."
-    },
-    "dentalClinic": {
-        "title": "Dental Clinic Website",
-        "description": "I designed a mockup for a dental clinic website, including a clear call to action for scheduling appointments."
-    },
-    "buttons": {
-        "website": "Website",
-        "code": "Code"
+    "skills": {
+        "title": "Skills & Technologies",
+        "description": "I specialize in modern web development technologies, crafting scalable, efficient, and responsive solutions with the best tools in the industry."
     }
-},
-"skills": {
-    "title": "Skills & Technologies",
-    "description": {
-        "part1": "I am",
-        "part2": "to continuously growing my",
-        "part3": "and delivering",
-        "part4": "I am eager to bring my",
-        "part5": "to a",
-        "part6": "where I can contribute to building",
-        "part7": "while continuing to grow as a"
-    },
-    "highlights": {
-        "dedicated": "dedicated",
-        "expertise": "expertise",
-        "impactfulSolutions": "impactful solutions",
-        "skills": "skills",
-        "collaborativeTeam": "collaborative team",
-        "exceptionalProjects": "exceptional projects",
-        "developer": "developer"
-    }
-}
 }

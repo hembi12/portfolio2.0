@@ -18,13 +18,7 @@ export const Skills: React.FC = () => {
 
             {/* Descripción */}
             <p className="text-gray-200 mt-4 text-md sm:text-base lg:text-lg leading-relaxed text-center md:text-left">
-                {t('skills.description.part1')} <span className="text-cyan-200">{t('skills.highlights.dedicated')}</span>{' '}
-                {t('skills.description.part2')} <span className="text-cyan-200">{t('skills.highlights.expertise')}</span>{' '}
-                {t('skills.description.part3')} <span className="text-cyan-200">{t('skills.highlights.impactfulSolutions')}</span>.{' '}
-                {t('skills.description.part4')} <span className="text-cyan-200">{t('skills.highlights.skills')}</span>{' '}
-                {t('skills.description.part5')} <span className="text-cyan-200">{t('skills.highlights.collaborativeTeam')}</span>{' '}
-                {t('skills.description.part6')} <span className="text-cyan-200">{t('skills.highlights.exceptionalProjects')}</span>{' '}
-                {t('skills.description.part7')} <span className="text-cyan-200">{t('skills.highlights.developer')}</span>.
+                {t('skills.description')}
             </p>
 
             {/* Orbiting Circles */}
@@ -44,7 +38,6 @@ export const Skills: React.FC = () => {
                     <SiBootstrap color="#A855F7" size={50} />
                     <SiExpress color="#ffffff" size={50} />
                 </OrbitingCircles>
-
 
                 {/* Órbita secundaria */}
                 <OrbitingCircles radius={100} reverse speed={1}>
