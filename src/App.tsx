@@ -7,7 +7,7 @@ import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/contact/Contact";
-import DockComponent from "./components/DockComponent";
+import DockComponent from "./components/dock/DockComponent";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
