@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import Header from "./components/Header";
-import About from "./components/About";
+import About from "./components/about/About";
 import WorkExperience from "./components/WorkExperience";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
