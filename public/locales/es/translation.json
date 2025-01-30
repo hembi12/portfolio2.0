@@ -3,7 +3,7 @@
     "aboutdock": "Sobre Mí",
     "projectsdock": "Proyectos",
     "skillsdock": "Habilidades",
-    "contact": "Contáctame",
+    "contactdock": "Contáctame",
     "workExperience": "Experiencia Laboral",
     "education": "Educación",
     "changeLanguage": "Cambiar Idioma",
@@ -28,7 +28,7 @@
     },
     "loading": "Cargando traducciones...",
     "about": {
-        "title": "Más Allá del Código: Quién Soy",
+        "title": "Un poco sobre mi",
         "description": "Mis pasiones impulsan mi creatividad, moldeando cómo construyo y resuelvo. Tecnología, música, viajes. Todo inspira mi trabajo."
     },
     "interests": {
@@ -71,5 +71,38 @@
     "skills": {
         "title": "Habilidades y Tecnologías",
         "description": "Me especializo en tecnologías modernas de desarrollo web, creando soluciones escalables, eficientes y responsivas con las mejores herramientas del sector."
+    },
+    "contact": {
+        "title": "¡Contáctame!",
+        "description": "¿Tienes una pregunta o un proyecto en mente?. Envíame un mensaje y te responderé pronto.",
+        "form": {
+            "name": "Tu Nombre:",
+            "email": "Tu Correo:",
+            "subject": "Asunto:",
+            "selectSubject": "Selecciona un Asunto",
+            "generalInquiry": "Consulta General",
+            "projectCollaboration": "Colaboración en Proyecto",
+            "feedback": "Retroalimentación",
+            "other": "Otro",
+            "message": "Tu Mensaje:",
+            "sending": "Enviando...",
+            "send": "Enviar Mensaje",
+            "successMessage": "¡Mensaje enviado con éxito!",
+            "errorMessage": "No se pudo enviar el mensaje. Inténtalo de nuevo."
+        },
+        "checkbox": {
+            "agree": "Acepto la",
+            "privacyPolicy": "Política de Privacidad"
+        },
+        "validation": {
+            "nameMin": "El nombre debe tener al menos 3 caracteres.",
+            "nameRequired": "El nombre es obligatorio.",
+            "emailInvalid": "Correo electrónico inválido.",
+            "emailRequired": "El correo electrónico es obligatorio.",
+            "subjectRequired": "Por favor, selecciona un asunto.",
+            "messageMin": "El mensaje debe tener al menos 10 caracteres.",
+            "messageRequired": "El mensaje es obligatorio.",
+            "privacyRequired": "Debes aceptar la Política de Privacidad."
+        }
     }
 }

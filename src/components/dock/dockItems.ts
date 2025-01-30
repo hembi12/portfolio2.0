@@ -13,7 +13,7 @@ export const getDockItems = (t: (key: string) => string, handleLanguageChange: (
     { href: '#about', icon: SmileIcon, label: t('aboutdock') },
     { href: '#projects', icon: CodeIcon, label: t('projectsdock') },
     { href: '#skills', icon: ZapIcon, label: t('skillsdock') },
-    { href: '#contact', icon: MailIcon, label: t('contact') },
+    { href: '#contact', icon: MailIcon, label: t('contactdock') },
     { href: '#work-experience', icon: BriefcaseIcon, label: t('workExperience') },
     { href: '#education', icon: GraduationCapIcon, label: t('education') },
     { icon: GlobeIcon, label: t('changeLanguage'), onClick: handleLanguageChange },

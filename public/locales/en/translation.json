@@ -3,7 +3,7 @@
     "aboutdock": "About Me",
     "projectsdock": "Projects",
     "skillsdock": "Skills",
-    "contact": "Contact Me",
+    "contactdock": "Contact Me",
     "workExperience": "Work Experience",
     "education": "Education",
     "changeLanguage": "Change Language",
@@ -28,7 +28,7 @@
     },
     "loading": "Loading translations...",
     "about": {
-        "title": "Beyond Code: Who I Am",
+        "title": "A little about me",
         "description": "My passions fuel my creativity, shaping how I build and solve problems. Tech, music, travel. Everything inspires my work."
     },
     "interests": {
@@ -71,5 +71,38 @@
     "skills": {
         "title": "Skills & Technologies",
         "description": "I specialize in modern web development technologies, crafting scalable, efficient, and responsive solutions with the best tools in the industry."
+    },
+    "contact": {
+        "title": "Get in Touch!",
+        "description": "Have a question or a project in mind?. Send me a message and I'll get back to you soon!",
+        "form": {
+            "name": "Your Name:",
+            "email": "Your Email:",
+            "subject": "Subject:",
+            "selectSubject": "Select Subject",
+            "generalInquiry": "General Inquiry",
+            "projectCollaboration": "Project Collaboration",
+            "feedback": "Feedback",
+            "other": "Other",
+            "message": "Your Message:",
+            "sending": "Sending...",
+            "send": "Send Message",
+            "successMessage": "Message sent successfully!",
+            "errorMessage": "Failed to send the message. Please try again."
+        },
+        "checkbox": {
+            "agree": "I agree to the",
+            "privacyPolicy": "Privacy Policy"
+        },
+        "validation": {
+            "nameMin": "Name must be at least 3 characters.",
+            "nameRequired": "Name is required.",
+            "emailInvalid": "Invalid email address.",
+            "emailRequired": "Email is required.",
+            "subjectRequired": "Please select a subject.",
+            "messageMin": "Message must be at least 10 characters.",
+            "messageRequired": "Message is required.",
+            "privacyRequired": "You must agree to the Privacy Policy."
+        }
     }
 }
