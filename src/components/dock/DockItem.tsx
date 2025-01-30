@@ -1,5 +1,5 @@
 // src/components/dock/DockItem.tsx
-import React, { useRef } from 'react';
+import React, { useRef, useLayoutEffect, useState } from 'react';
 import { motion, MotionValue, useSpring, useTransform } from 'framer-motion';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { DockIcon } from '../ui/dock';
@@ -21,9 +21,16 @@ type DockItemProps = {
 
 const DockItem: React.FC<DockItemProps> = ({ item, mouseX, size, magnification, distance }) => {
     const ref = useRef<HTMLDivElement>(null);
+    const [bounds, setBounds] = useState<{ left: number; width: number } | null>(null);
+
+    useLayoutEffect(() => {
+        if (ref.current) {
+            const rect = ref.current.getBoundingClientRect();
+            setBounds({ left: rect.left, width: rect.width });
+        }
+    }, []);
 
     const distanceCalc = useTransform(mouseX, (x: number) => {
-        const bounds = ref.current?.getBoundingClientRect();
         if (!bounds) return Infinity;
         return Math.abs(x - (bounds.left + bounds.width / 2));
     });
@@ -56,10 +63,12 @@ const DockItem: React.FC<DockItemProps> = ({ item, mouseX, size, magnification, 
                     </DockIcon>
                 </motion.div>
             </Tooltip.Trigger>
-            <Tooltip.Content side="top" align="center" className="rounded bg-white px-2 py-1 text-xs text-black shadow-lg">
-                {item.label}
-                <Tooltip.Arrow className="fill-black" />
-            </Tooltip.Content>
+            <Tooltip.Portal>
+                <Tooltip.Content side="top" align="center" className="rounded bg-white px-2 py-1 text-xs text-black shadow-lg">
+                    {item.label}
+                    <Tooltip.Arrow className="fill-black" />
+                </Tooltip.Content>
+            </Tooltip.Portal>
         </Tooltip.Root>
     );
 };

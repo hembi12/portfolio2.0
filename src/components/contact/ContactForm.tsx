@@ -3,12 +3,26 @@ import { useState } from "react";
 import { useFormValidation, FormData } from "./useFormValidation";
 import ContactInput from "./ContactInput";
 import ContactCheckbox from "./ContactCheckbox";
-import { toast } from "react-toastify";
 
 const ContactForm = () => {
     const formEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
     const [isSubmitting, setIsSubmitting] = useState(false);
     const { register, handleSubmit, formState: { errors }, reset } = useFormValidation();
+
+    const showToast = async (message: string, type: "success" | "error") => {
+        const toastModule = await import("react-toastify");
+        const toast = toastModule.toast;
+        
+        toast[type](message, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            theme: "dark",
+        });
+    };
 
     const onSubmit = async (data: FormData) => {
         setIsSubmitting(true);
@@ -24,11 +38,11 @@ const ContactForm = () => {
                 throw new Error(`Error ${response.status}: ${response.statusText}`);
             }
 
-            toast.success("Message sent successfully!");
+            await showToast("Message sent successfully!", "success");
             reset();
         } catch (error) {
             console.error("Form submission error:", error);
-            toast.error("Failed to send the message. Please try again.");
+            await showToast("Failed to send the message. Please try again.", "error");
         }
 
         setIsSubmitting(false);

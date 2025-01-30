@@ -5,7 +5,7 @@ import About from "./components/about/About";
 import WorkExperience from "./components/WorkExperience";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
-import Projects from "./components/Projects";
+import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import DockComponent from "./components/dock/DockComponent";
 import Footer from "./components/Footer";

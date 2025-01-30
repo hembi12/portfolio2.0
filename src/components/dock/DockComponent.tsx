@@ -1,32 +1,24 @@
 // src/components/dock/DockComponent.tsx
-import React, { useState, useEffect, lazy, Suspense } from 'react';
-import { useMotionValue } from 'framer-motion';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getDockConfig } from './dockConfig';
 import { getDockItems } from './dockItems';
 import { Dock } from '../ui/dock';
+import { useMotionValue } from 'framer-motion';
 
-const DockItem = lazy(() => import('./DockItem'));
-const TooltipProvider = lazy(() => import('@radix-ui/react-tooltip').then(module => ({ default: module.Provider })));
-const ToastContainer = lazy(() => import('react-toastify').then(module => ({ default: module.ToastContainer })));
-
-const debounce = <T extends unknown[]>(func: (...args: T) => void, delay: number) => {
-    let timer: NodeJS.Timeout;
-    return (...args: T) => {
-        clearTimeout(timer);
-        timer = setTimeout(() => func(...args), delay);
-    };
-};
+const DockItem = React.lazy(() => import('./DockItem'));
+const TooltipProvider = React.lazy(() => import('@radix-ui/react-tooltip').then(module => ({ default: module.Provider })));
+const ToastContainer = React.lazy(() => import('react-toastify').then(module => ({ default: module.ToastContainer })));
 
 const DockComponent: React.FC = () => {
-    const mouseX = useMotionValue(Infinity);
     const { i18n, t } = useTranslation();
     const [dockConfig, setDockConfig] = useState(getDockConfig(typeof window !== 'undefined' ? window.innerWidth : 1024));
+    const mouseX = useMotionValue(Infinity);
 
     useEffect(() => {
-        const handleResize = debounce(() => {
+        const handleResize = () => {
             setDockConfig(getDockConfig(window.innerWidth));
-        }, 200);
+        };
         
         window.addEventListener('resize', handleResize);
         handleResize();

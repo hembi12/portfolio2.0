@@ -15,96 +15,78 @@
             "Martil"
         ],
         "description": {
-            "part1": "turned",
-            "part2": "developer. Passionate about programming who sits in front of his monitors every day to",
+            "part1": "becoming a",
+            "part2": "Passionate about programming who sits in front of his monitors every day to",
             "part3": "and improve."
         },
         "roleHighlights": {
             "customerService": "Customer service expert",
-            "fullStack": "full-stack developer",
+            "fullStack": "full-stack developer.",
             "learnNew": "learn something new"
         },
         "profileAlt": "Profile picture"
     },
+    "loading": "Loading translations...",
     "about": {
-        "title": "About Me",
-        "description": {
-            "part1": "I started my journey in",
-            "part2": "seeking opportunities to grow and innovate.",
-            "part3": "Passionate about",
-            "part4": "bringing creativity into my work.",
-            "part5": "With each",
-            "part6": "new project, I learn and improve.",
-            "part7": "Every deployment reminds me",
-            "part8": "how far I've come.",
-            "part9": "Growth and motivation",
-            "part10": "drive me to keep learning and evolving."
-        },
-        "highlights": {
-            "newCareer": "this career,",
-            "creativity": "creativity,",
-            "newProject": "new project",
-            "deployed": "deployed project",
-            "growth": "growth,",
-            "motivation": "motivation,",
-            "improvement": "self-improvement"
-        }
+        "title": "Beyond Code: Who I Am",
+        "description": "My passions fuel my creativity, shaping how I build and solve problems. Tech, music, travel. Everything inspires my work."
+    },
+    "interests": {
+        "F1Fan": "F1 is all about speed, strategy, and pure adrenaline. Every race is a showcase of technology and intensity. 🏁 🏎️",
+        "MyFriends": "Nothing beats laughter, moments, and crazy adventures with friends. They always make life more fun. 🥳 🎮",
+        "MusicAddict": "Music is always there: it inspires, motivates, and accompanies every moment. Life needs a great soundtrack. 🎵 🎸",
+        "CatLover": "Cats have pure style: independent, affectionate, and with more personality than many humans. 😺 🐈‍⬛",
+        "TARS": "*Interstellar* is art: science, emotions, and a soundtrack that leaves you traveling through time. 🚀 🪐",
+        "InLove": "Having someone special is the best: love, support, and unique moments that make everything better. 💕 😍",
+        "WanderLust": "Traveling is the best investment: you discover, learn, and create memories that last forever. ✈️ 🏖️",
+        "CoderLife": "Being a dev means turning ideas into reality. Code, coffee, and many sleepless nights fixing bugs. 🤖 💾",
+        "ZeroMiedo": "Wrestling is pure passion. Heroes, villains, and the spectacle that always gives you chills. 💪 🔥",
+        "FamilyFirst": "Family is everything: love, laughter, unconditional support, and a good homemade meal. 🏆 ❤️",
+        "TopFood": "Mexican food is next level: tacos, mole, pozole, and that perfect touch of spice. 🌶️ 🇲🇽"
     },
     "projects": {
-        "title": "Built from Scratch",
-        "description": {
-            "part1": "I have",
-            "built": "built",
-            "part2": "these projects from",
-            "scratch": "scratch",
-            "part3": "applying the",
-            "knowledge": "knowledge",
-            "part4": "and",
-            "skills": "skills",
-            "part5": "I’ve gained through my dedicated learning of various",
-            "technologies": "technologies",
-            "tools": "tools"
-        },
-        "portfolioV1": {
-            "title": "Portfolio V1",
-            "description": "I developed the first version of my portfolio website to showcase my skills, projects, and experience."
-        },
-        "landingPage": {
-            "title": "Landing Page",
-            "description": "I developed an interactive landing page mockup focused on optimizing the presentation of key elements."
-        },
-        "birthdayInvitation": {
-            "title": "Birthday Invitation",
-            "description": "I created an interactive invitation page for my birthday celebration with an RSVP form."
-        },
-        "dentalClinic": {
-            "title": "Dental Clinic Website",
-            "description": "I designed a mockup for a dental clinic website, including a clear call to action for scheduling appointments."
-        },
-        "buttons": {
-            "website": "Website",
-            "code": "Code"
-        }
+        "title": "From Zero to Implementation",
+        "description": "I turn ideas into attractive, functional, and responsive web experiences, combining creativity, technology, and best practices.",
+    "portfolioV1": {
+        "title": "Portfolio V1",
+        "description": "I developed the first version of my portfolio website to showcase my skills, projects, and experience."
     },
-    "skills": {
-        "title": "Skills & Technologies",
-        "description": {
-            "part1": "I am",
-            "part2": "to continuously growing my",
-            "part3": "and delivering",
-            "part4": "I am eager to bring my",
-            "part5": "to a",
-            "part6": "where I can contribute to building",
-            "part7": "while continuing to grow as a"
-        },
-        "highlights": {
-            "dedicated": "dedicated",
-            "expertise": "expertise",
-            "impactfulSolutions": "impactful solutions",
-            "skills": "skills",
-            "collaborativeTeam": "collaborative team",
-            "exceptionalProjects": "exceptional projects",
-            "developer": "developer"
-        }
+    "landingPage": {
+        "title": "Landing Page",
+        "description": "I developed an interactive landing page mockup focused on optimizing the presentation of key elements."
+    },
+    "birthdayInvitation": {
+        "title": "Birthday Invitation",
+        "description": "I created an interactive invitation page for my birthday celebration with an RSVP form."
+    },
+    "dentalClinic": {
+        "title": "Dental Clinic Website",
+        "description": "I designed a mockup for a dental clinic website, including a clear call to action for scheduling appointments."
+    },
+    "buttons": {
+        "website": "Website",
+        "code": "Code"
     }
+},
+"skills": {
+    "title": "Skills & Technologies",
+    "description": {
+        "part1": "I am",
+        "part2": "to continuously growing my",
+        "part3": "and delivering",
+        "part4": "I am eager to bring my",
+        "part5": "to a",
+        "part6": "where I can contribute to building",
+        "part7": "while continuing to grow as a"
+    },
+    "highlights": {
+        "dedicated": "dedicated",
+        "expertise": "expertise",
+        "impactfulSolutions": "impactful solutions",
+        "skills": "skills",
+        "collaborativeTeam": "collaborative team",
+        "exceptionalProjects": "exceptional projects",
+        "developer": "developer"
+    }
+}
 }

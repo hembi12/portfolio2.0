@@ -4,7 +4,7 @@ import InterestsList from "./InterestsList";
 
 const About: React.FC = () => {
     const { t, ready } = useTranslation();
-    if (!ready) return <div className="animate-pulse text-gray-400 text-center">Loading translations...</div>;
+    if (!ready) return <div className="animate-pulse text-gray-400 text-center">{t("loading")}</div>;
 
     return (
         <section className="my-8 px-4 max-w-3xl mx-auto">
@@ -12,7 +12,7 @@ const About: React.FC = () => {
                 {t("about.title")}
             </h2>
             <p className="text-gray-200 mt-4 text-md sm:text-base lg:text-lg leading-relaxed text-center md:text-left">
-                {t("about.description.part1")} <span className="text-cyan-200">{t("about.highlights.newCareer")}</span> {t("about.description.part2")} <span className="text-cyan-200">{t("about.highlights.creativity")}</span> {t("about.description.part3")}
+                {t("about.description")}
             </p>
             <InterestsList />
         </section>
