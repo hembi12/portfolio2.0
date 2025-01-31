@@ -108,10 +108,13 @@
     "workexperience": {
         "title": "Steps in My Career",
         "experience": {
+            "paypalCompany": "PayPal",
             "paypalRole": "Customer Solutions Agent",
             "paypalDate": "July 2023 - Present",
+            "tpCompany": "Teleperformance",
             "tpRole": "Customer Solutions Agent - Team Lead",
             "tpDate": "August 2019 - June 2023",
+            "silaCompany": "Grupo SILA",
             "silaRole": "Security Monitoring Operator - Team Lead",
             "silaDate": "November 2015 - July 2019"
         },

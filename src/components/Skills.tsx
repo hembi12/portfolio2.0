@@ -1,24 +1,30 @@
-import React, { lazy, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { OrbitingCircles } from '@/components/ui/orbiting-circles';
 
-// Lazy loading de iconos
-const FaReact = lazy(() => import('react-icons/fa').then(module => ({ default: module.FaReact })));
-const FaNodeJs = lazy(() => import('react-icons/fa').then(module => ({ default: module.FaNodeJs })));
-const FaHtml5 = lazy(() => import('react-icons/fa').then(module => ({ default: module.FaHtml5 })));
-const FaCss3Alt = lazy(() => import('react-icons/fa').then(module => ({ default: module.FaCss3Alt })));
-const FaGitAlt = lazy(() => import('react-icons/fa').then(module => ({ default: module.FaGitAlt })));
-const FaGithub = lazy(() => import('react-icons/fa').then(module => ({ default: module.FaGithub })));
-const SiTypescript = lazy(() => import('react-icons/si').then(module => ({ default: module.SiTypescript })));
-const SiJavascript = lazy(() => import('react-icons/si').then(module => ({ default: module.SiJavascript })));
-const SiTailwindcss = lazy(() => import('react-icons/si').then(module => ({ default: module.SiTailwindcss })));
-const SiBootstrap = lazy(() => import('react-icons/si').then(module => ({ default: module.SiBootstrap })));
-const SiOpenai = lazy(() => import('react-icons/si').then(module => ({ default: module.SiOpenai })));
-const SiVite = lazy(() => import('react-icons/si').then(module => ({ default: module.SiVite })));
-const SiExpress = lazy(() => import('react-icons/si').then(module => ({ default: module.SiExpress })));
-const SiVercel = lazy(() => import('react-icons/si').then(module => ({ default: module.SiVercel })));
-const BiLogoVisualStudio = lazy(() => import('react-icons/bi').then(module => ({ default: module.BiLogoVisualStudio })));
-const IoLogoFirebase = lazy(() => import('react-icons/io5').then(module => ({ default: module.IoLogoFirebase })));
+// ✅ Función para carga dinámica de iconos
+const loadIcon = (icon: keyof typeof import('react-icons/fa')) =>
+    React.lazy(() => import('react-icons/fa').then(module => ({ default: module[icon] })));
+
+// 🔹 Mapeo de iconos
+const icons = {
+    FaReact: loadIcon('FaReact'),
+    FaNodeJs: loadIcon('FaNodeJs'),
+    FaHtml5: loadIcon('FaHtml5'),
+    FaCss3Alt: loadIcon('FaCss3Alt'),
+    FaGitAlt: loadIcon('FaGitAlt'),
+    FaGithub: loadIcon('FaGithub'),
+    SiTypescript: React.lazy(() => import('react-icons/si').then(module => ({ default: module.SiTypescript }))),
+    SiJavascript: React.lazy(() => import('react-icons/si').then(module => ({ default: module.SiJavascript }))),
+    SiTailwindcss: React.lazy(() => import('react-icons/si').then(module => ({ default: module.SiTailwindcss }))),
+    SiBootstrap: React.lazy(() => import('react-icons/si').then(module => ({ default: module.SiBootstrap }))),
+    SiOpenai: React.lazy(() => import('react-icons/si').then(module => ({ default: module.SiOpenai }))),
+    SiVite: React.lazy(() => import('react-icons/si').then(module => ({ default: module.SiVite }))),
+    SiExpress: React.lazy(() => import('react-icons/si').then(module => ({ default: module.SiExpress }))),
+    SiVercel: React.lazy(() => import('react-icons/si').then(module => ({ default: module.SiVercel }))),
+    BiLogoVisualStudio: React.lazy(() => import('react-icons/bi').then(module => ({ default: module.BiLogoVisualStudio }))),
+    IoLogoFirebase: React.lazy(() => import('react-icons/io5').then(module => ({ default: module.IoLogoFirebase }))),
+};
 
 export const Skills: React.FC = () => {
     const { t } = useTranslation();
@@ -40,25 +46,25 @@ export const Skills: React.FC = () => {
 
                 <Suspense fallback={<div className="text-gray-400 text-center">Loading Icons...</div>}>
                     <OrbitingCircles radius={150} speed={1}>
-                        <FaHtml5 color="#FF5733" size={50} aria-label="HTML5" />
-                        <FaCss3Alt color="#2965F1" size={50} aria-label="CSS3" />
-                        <SiJavascript color="#F7DF1E" size={50} aria-label="JavaScript" />
-                        <SiTypescript color="#007ACC" size={50} aria-label="TypeScript" />
-                        <FaReact color="#61DAFB" size={50} aria-label="React.js" />
-                        <SiTailwindcss color="#38BDF8" size={50} aria-label="Tailwind CSS" />
-                        <SiBootstrap color="#A855F7" size={50} aria-label="Bootstrap" />
-                        <SiExpress color="#ffffff" size={50} aria-label="Express.js" />
+                        <icons.FaHtml5 color="#FF5733" size={50} aria-label="HTML5" />
+                        <icons.FaCss3Alt color="#2965F1" size={50} aria-label="CSS3" />
+                        <icons.SiJavascript color="#F7DF1E" size={50} aria-label="JavaScript" />
+                        <icons.SiTypescript color="#007ACC" size={50} aria-label="TypeScript" />
+                        <icons.FaReact color="#61DAFB" size={50} aria-label="React.js" />
+                        <icons.SiTailwindcss color="#38BDF8" size={50} aria-label="Tailwind CSS" />
+                        <icons.SiBootstrap color="#A855F7" size={50} aria-label="Bootstrap" />
+                        <icons.SiExpress color="#ffffff" size={50} aria-label="Express.js" />
                     </OrbitingCircles>
 
                     <OrbitingCircles radius={100} reverse speed={1}>
-                        <BiLogoVisualStudio color="#0078D7" size={60} aria-label="Visual Studio Code" />
-                        <SiVite color="#A855F7" size={60} aria-label="Vite" />
-                        <FaGitAlt color="#F14E32" size={60} aria-label="Git" />
-                        <FaGithub color="#ffffff" size={60} aria-label="GitHub" />
-                        <IoLogoFirebase color="#FFA000" size={60} aria-label="Firebase" />
-                        <SiVercel color="#ffffff" size={60} aria-label="Vercel" />
-                        <FaNodeJs color="#3C873A" size={50} aria-label="Node.js" />
-                        <SiOpenai color="#ffffff" size={50} aria-label="OpenAI" />
+                        <icons.BiLogoVisualStudio color="#0078D7" size={60} aria-label="Visual Studio Code" />
+                        <icons.SiVite color="#A855F7" size={60} aria-label="Vite" />
+                        <icons.FaGitAlt color="#F14E32" size={60} aria-label="Git" />
+                        <icons.FaGithub color="#ffffff" size={60} aria-label="GitHub" />
+                        <icons.IoLogoFirebase color="#FFA000" size={60} aria-label="Firebase" />
+                        <icons.SiVercel color="#ffffff" size={60} aria-label="Vercel" />
+                        <icons.FaNodeJs color="#3C873A" size={50} aria-label="Node.js" />
+                        <icons.SiOpenai color="#ffffff" size={50} aria-label="OpenAI" />
                     </OrbitingCircles>
                 </Suspense>
             </div>

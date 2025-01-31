@@ -3,7 +3,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useTranslation } from "react-i18next";
 import * as Yup from "yup";
 
-// Definir la estructura del formulario con TypeScript
 export interface FormData {
     name: string;
     email: string;
@@ -15,7 +14,7 @@ export interface FormData {
 const useFormValidation = () => {
     const { t } = useTranslation();
 
-    // Esquema de validación con Yup (debe coincidir con FormData)
+    // No debe haber condiciones antes del hook
     const validationSchema = Yup.object({
         name: Yup.string()
             .min(3, t("contact.validation.nameMin"))

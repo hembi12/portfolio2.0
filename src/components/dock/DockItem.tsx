@@ -1,4 +1,3 @@
-// src/components/dock/DockItem.tsx
 import React, { useRef, useLayoutEffect, useState } from 'react';
 import { motion, MotionValue, useSpring, useTransform } from 'framer-motion';
 import * as Tooltip from '@radix-ui/react-tooltip';
@@ -23,15 +22,23 @@ const DockItem: React.FC<DockItemProps> = ({ item, mouseX, size, magnification, 
     const ref = useRef<HTMLDivElement>(null);
     const [bounds, setBounds] = useState<{ left: number; width: number } | null>(null);
 
+    // ✅ Actualiza las coordenadas cuando cambia la ventana
     useLayoutEffect(() => {
-        if (ref.current) {
-            const rect = ref.current.getBoundingClientRect();
-            setBounds({ left: rect.left, width: rect.width });
-        }
+        const updateBounds = () => {
+            if (ref.current) {
+                const rect = ref.current.getBoundingClientRect();
+                setBounds({ left: rect.left, width: rect.width });
+            }
+        };
+
+        updateBounds();
+        window.addEventListener('resize', updateBounds);
+        return () => window.removeEventListener('resize', updateBounds);
     }, []);
 
+    // ✅ Si bounds es null, regresa el tamaño base
     const distanceCalc = useTransform(mouseX, (x: number) => {
-        if (!bounds) return Infinity;
+        if (!bounds) return size;
         return Math.abs(x - (bounds.left + bounds.width / 2));
     });
 
@@ -48,7 +55,13 @@ const DockItem: React.FC<DockItemProps> = ({ item, mouseX, size, magnification, 
                 >
                     <DockIcon>
                         {item.href ? (
-                            <a href={item.href} aria-label={item.label} className="rounded-full p-2">
+                            <a
+                                href={item.href}
+                                aria-label={item.label}
+                                className="rounded-full p-2"
+                                role="button"
+                                tabIndex={0}
+                            >
                                 <item.icon className="w-6 h-6 hover:text-cyan-200 transition-colors duration-200" />
                             </a>
                         ) : (
@@ -56,6 +69,8 @@ const DockItem: React.FC<DockItemProps> = ({ item, mouseX, size, magnification, 
                                 onClick={item.onClick}
                                 aria-label={item.label}
                                 className="rounded-full p-2 focus:outline-none"
+                                role="button"
+                                tabIndex={0}
                             >
                                 <item.icon className="w-6 h-6 hover:text-cyan-200 transition-colors duration-200" />
                             </button>

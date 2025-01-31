@@ -1,4 +1,3 @@
-// src/components/projects/Projects.tsx
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BorderBeam } from '@/components/ui/border-beam';
@@ -19,24 +18,33 @@ const Projects: React.FC = () => {
                     {t('projects.description')}
                 </p>
             </div>
+
             <div className="flex overflow-x-auto gap-4 scrollbar-thin pb-2">
-                {projects.map((project, index) => (
-                    <div key={index} className="bg-gray-100 relative flex-shrink-0 flex flex-col rounded-lg shadow-md overflow-hidden w-80">
+                {projects.map((project) => (
+                    <div key={project.repository} className="bg-gray-100 relative flex-shrink-0 flex flex-col rounded-lg shadow-md overflow-hidden w-80">
                         <BorderBeam />
-                        <img src={project.image} alt={t(project.titleKey)} className="w-full h-48 object-fit" />
+                        <img src={project.image} alt={t(project.titleKey)} className="w-full h-48 object-cover" loading="lazy" />
                         <div className="p-6 flex flex-col flex-grow">
                             <h3 className="text-gray-900 text-2xl font-bold mb-2">{t(project.titleKey)}</h3>
                             <p className="text-gray-700 dark:text-gray-300 mb-4">{t(project.descriptionKey)}</p>
                             <div className="flex flex-wrap gap-2 mb-4">
-                                {project.tags.map((tag, tagIndex) => (
-                                    <span key={tagIndex} style={generateColorFromText(tag)} className="px-2 py-1 text-xs font-medium rounded">
+                                {project.tags.map((tag) => (
+                                    <span key={tag} style={generateColorFromText(tag)} className="px-2 py-1 text-xs font-medium rounded">
                                         {tag}
                                     </span>
                                 ))}
                             </div>
                             <div className="mt-auto flex gap-4 pt-4 border-t border-gray-900">
-                                <InteractiveHoverButton text={t('projects.buttons.website')} href={project.website} />
-                                <InteractiveHoverButton text={t('projects.buttons.code')} href={project.repository} />
+                                <InteractiveHoverButton
+                                    text={t('projects.buttons.website')}
+                                    href={project.website}
+                                    aria-label={t('projects.aria.website', { project: t(project.titleKey) })}
+                                />
+                                <InteractiveHoverButton
+                                    text={t('projects.buttons.code')}
+                                    href={project.repository}
+                                    aria-label={t('projects.aria.code', { project: t(project.titleKey) })}
+                                />
                             </div>
                         </div>
                     </div>

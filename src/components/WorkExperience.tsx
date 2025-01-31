@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import InteractiveHoverButton from '@/components/ui/interactive-hover-button';
 import CVFile from '@/assets/Hector_Martil_CV.pdf'; // Importar el archivo PDF
@@ -7,13 +7,23 @@ import SilaLogo from '@/assets/sila.jpg'; // Grupo SILA logo
 import PayPalLogo from '@/assets/paypal.svg'; // PayPal logo
 
 const experiences = [
-    { company: 'PayPal', role: 'workexperience.experience.paypalRole', date: 'workexperience.experience.paypalDate', logo: PayPalLogo },
-    { company: 'Teleperformance', role: 'workexperience.experience.tpRole', date: 'workexperience.experience.tpDate', logo: TPLogo },
-    { company: 'Grupo SILA', role: 'workexperience.experience.silaRole', date: 'workexperience.experience.silaDate', logo: SilaLogo },
+    { company: 'workexperience.experience.paypalCompany', role: 'workexperience.experience.paypalRole', date: 'workexperience.experience.paypalDate', logo: PayPalLogo },
+    { company: 'workexperience.experience.tpCompany', role: 'workexperience.experience.tpRole', date: 'workexperience.experience.tpDate', logo: TPLogo },
+    { company: 'workexperience.experience.silaCompany', role: 'workexperience.experience.silaRole', date: 'workexperience.experience.silaDate', logo: SilaLogo },
 ];
 
 const WorkExperience: React.FC = () => {
     const { t } = useTranslation();
+
+    // ✅ Optimización de la Descarga del CV con `useCallback`
+    const handleDownloadCV = useCallback(() => {
+        const link = document.createElement('a');
+        link.href = CVFile;
+        link.download = 'Hector_Martil_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }, []);
 
     return (
         <section className="my-8 px-4 max-w-3xl mx-auto">
@@ -26,27 +36,28 @@ const WorkExperience: React.FC = () => {
                         key={index}
                         className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4"
                     >
-                        {/* Logo de la compañía con width y height */}
+                        {/* ✅ Logo accesible con `t()` para traducción */}
                         <div className="w-16 h-16 flex-shrink-0">
                             <img
                                 src={exp.logo}
-                                alt={`${exp.company} logo`}
+                                alt={t('workexperience.logoAlt', { company: t(exp.company) })}
                                 className="w-full h-full object-cover rounded-full"
                                 width={64}
                                 height={64}
                                 loading="lazy"
                             />
                         </div>
-                        {/* Detalles de la experiencia */}
+                        {/* ✅ Mejora en la accesibilidad */}
                         <div className="text-center md:text-left">
-                            <h3 className="text-cyan-200 text-lg sm:text-xl font-semibold">{exp.company}</h3>
+                            <h3 className="text-cyan-200 text-lg sm:text-xl font-semibold">{t(exp.company)}</h3>
                             <p className="text-gray-300 text-md sm:text-base">{t(exp.role)}</p>
                             <p className="text-gray-400 text-md sm:text-base">{t(exp.date)}</p>
                         </div>
                     </li>
                 ))}
             </ul>
-            {/* Botones para el CV con aria-label */}
+
+            {/* ✅ Botones optimizados con `rel="noopener noreferrer"` */}
             <div className="mt-8 flex border-t border-gray-100 justify-center md:justify-start gap-4 pt-4">
                 <InteractiveHoverButton
                     text={t('workexperience.buttons.viewCV')}
@@ -55,13 +66,9 @@ const WorkExperience: React.FC = () => {
                 />
                 <InteractiveHoverButton
                     text={t('workexperience.buttons.download')}
-                    onClick={() => {
-                        const link = document.createElement('a');
-                        link.href = CVFile;
-                        link.download = 'Hector_Martil_CV.pdf';
-                        link.click();
-                    }}
+                    onClick={handleDownloadCV}
                     aria-label={t('workexperience.buttons.download')}
+                    rel="noopener noreferrer"
                 />
             </div>
         </section>

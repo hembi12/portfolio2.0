@@ -108,10 +108,13 @@
     "workexperience": {
         "title": "Pasos en mi Carrera",
         "experience": {
+            "paypalCompany": "PayPal",
             "paypalRole": "Agente de Soluciones al Cliente",
             "paypalDate": "Julio 2023 - Presente",
+            "tpCompany": "Teleperformance",
             "tpRole": "Agente de Soluciones al Cliente - Líder de Equipo",
             "tpDate": "Agosto 2019 - Junio 2023",
+            "silaCompany": "Grupo SILA",
             "silaRole": "Operador de Monitoreo de Seguridad - Líder de Equipo",
             "silaDate": "Noviembre 2015 - Julio 2019"
         },
