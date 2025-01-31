@@ -23,7 +23,9 @@ const App: React.FC = () => {
                             path="/"
                             element={
                                 <>
-                                    <Header/>
+                                    <Element name="header"> 
+                                        <Header /> 
+                                    </Element>
                                     <Element name="about">
                                         <About />
                                     </Element>
@@ -42,7 +44,7 @@ const App: React.FC = () => {
                                     <Element name="education">
                                         <Education />
                                     </Element>
-                                    <DockComponent /> {/* ✅ Dock usará estos IDs para desplazarse */}
+                                    <DockComponent />
                                     <Footer />
                                 </>
                             }

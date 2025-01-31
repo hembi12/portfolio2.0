@@ -47,7 +47,7 @@ const DockComponent: React.FC = () => {
     const dockItems = getDockItems(t, handleLanguageChange).map(item => ({
         ...item,
         sectionId: item.sectionId || item.label.toLowerCase().replace(/\s/g, "-")
-    }));    
+    }));      
 
     return (
         <>
