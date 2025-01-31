@@ -5,7 +5,7 @@
     "skillsdock": "Habilidades",
     "contactdock": "Contáctame",
     "workExperience": "Experiencia Laboral",
-    "education": "Educación",
+    "educationdock": "Educación",
     "changeLanguage": "Cambiar Idioma",
     "languageChanged": "Idioma cambiado a Español",
     "header": {
@@ -64,7 +64,7 @@
             "description": "Diseñé un mockup para el sitio web de una clínica dental, con un llamado claro a agendar citas."
         },
         "buttons": {
-            "website": "Sitio Web",
+            "website": "Web",
             "code": "Código"
         }
     },
@@ -174,5 +174,36 @@
             "description": "Si tienes preguntas sobre esta política de privacidad, contáctanos en"
         },
         "backButton": "Volver al Portafolio"
+    },
+    "education": {
+        "title": "Trayectoria Educativa",
+        "certifications": "Certificaciones",
+        "logoAlt": "Logo de {{institution}}",
+        "certLogoAlt": "Certificado: {{title}}",
+        "viewCertificate": "Ver certificado de {{title}}",
+        "institution": {
+            "utel": "Universidad Tecnológica Latinoamericana en Línea",
+            "devf": "DEV.F"
+        },
+        "degree": {
+            "utel": "Licenciatura en Administración de Tecnologías de la Información",
+            "devf": "Máster en Codificación: Backend, Frontend y Desarrollo Fullstack"
+        },
+        "date": {
+            "utel": "Febrero 2022 - Presente",
+            "devf": "Junio 2024 - Presente"
+        },
+        "certificates": {
+            "title": "Diplomado Internacional en Análisis de Sistemas Informáticos",
+            "issuer": "Universidad Tecnológica Latinoamericana en Línea",
+            "date": "Enero 2025",
+            "link": "/src/assets/010439887.DPLO.313614.DPL2025-384081.pdf"
+        }
+    },
+    "footer": {
+        "designedBy": "Diseñado y Desarrollado por",
+        "rightsReserved": "Todos los derechos reservados.",
+        "github": "Visita mi perfil de GitHub",
+        "linkedin": "Visita mi perfil de LinkedIn"
     }
 }

@@ -1,22 +1,22 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import Header from "./components/Header";
-import About from "./components/about/About";
-import WorkExperience from "./components/WorkExperience";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
-import Projects from "./components/projects/Projects";
-import Contact from "./components/contact/Contact";
 import DockComponent from "./components/dock/DockComponent";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+
+const About = lazy(() => import("./components/about/About"));
+const WorkExperience = lazy(() => import("./components/WorkExperience"));
+const Education = lazy(() => import("./components/Education"));
+const Skills = lazy(() => import("./components/Skills"));
+const Projects = lazy(() => import("./components/projects/Projects"));
+const Contact = lazy(() => import("./components/contact/Contact"));
 
 const App: React.FC = () => {
     return (
         <Router>
             <div className="font-sans">
                 <Routes>
-                    {/* Página principal */}
                     <Route
                         path="/"
                         element={
@@ -24,31 +24,19 @@ const App: React.FC = () => {
                                 <section id="header">
                                     <Header />
                                 </section>
-                                <section id="about">
-                                    <About />
-                                </section>
-                                <section id="projects">
-                                    <Projects />
-                                </section>
-                                <section id="skills">
-                                    <Skills />
-                                </section>
-                                <section id="contact">
-                                    <Contact />
-                                </section>
-                                <section id="work-experience">
-                                    <WorkExperience />
-                                </section>
-                                <section id="education">
-                                    <Education />
-                                </section>
-
+                                <Suspense fallback={<div className="text-center text-gray-400">Loading...</div>}>
+                                    <section id="about"><About /></section>
+                                    <section id="projects"><Projects /></section>
+                                    <section id="skills"><Skills /></section>
+                                    <section id="contact"><Contact /></section>
+                                    <section id="work-experience"><WorkExperience /></section>
+                                    <section id="education"><Education /></section>
+                                </Suspense>
                                 <DockComponent />
                                 <Footer />
                             </>
                         }
                     />
-                    {/* Página de Política de Privacidad con onBackToPortfolio */}
                     <Route path="/privacy-policy" element={<PrivacyPolicyWrapper />} />
                 </Routes>
             </div>
@@ -56,11 +44,17 @@ const App: React.FC = () => {
     );
 };
 
-// Componente que pasa la prop correctamente
 const PrivacyPolicyWrapper: React.FC = () => {
-    const navigate = useNavigate(); // Hook para navegar
-
-    return <PrivacyPolicy onBackToPortfolio={() => navigate("/#contact")} />;
+    const navigate = useNavigate();
+    return (
+        <PrivacyPolicy onBackToPortfolio={() => {
+            navigate("/");
+            setTimeout(() => {
+                const contactSection = document.getElementById("contact");
+                if (contactSection) contactSection.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+        }} />
+    );
 };
 
 export default App;

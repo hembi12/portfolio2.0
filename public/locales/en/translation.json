@@ -5,7 +5,7 @@
     "skillsdock": "Skills",
     "contactdock": "Contact Me",
     "workExperience": "Work Experience",
-    "education": "Education",
+    "educationdock": "Education",
     "changeLanguage": "Change Language",
     "languageChanged": "Language changed to English",
     "header": {
@@ -174,5 +174,36 @@
             "description": "If you have questions about this privacy policy, contact us at"
         },
         "backButton": "Back to Portfolio"
+    },
+    "education": {
+        "title": "Learning Journey",
+        "certifications": "Certifications",
+        "logoAlt": "Logo of {{institution}}",
+        "certLogoAlt": "Certificate: {{title}}",
+        "viewCertificate": "View certificate for {{title}}",
+        "institution": {
+            "utel": "Latin American Technological University Online",
+            "devf": "DEV.F"
+        },
+        "degree": {
+            "utel": "Bachelor's Degree in Information Technology Administration",
+            "devf": "Master in Coding: Backend, Frontend, and Fullstack Development"
+        },
+        "date": {
+            "utel": "February 2022 - Present",
+            "devf": "June 2024 - Present"
+        },
+        "certificates": {
+            "title": "International Diploma in Computer Systems Analysis",
+            "issuer": "Latin American Technological University Online",
+            "date": "January 2025",
+            "link": "/src/assets/010439887.DPLO.313614.DPL2025-384081.pdf"
+        }
+    },
+    "footer": {
+        "designedBy": "Designed and Built by",
+        "rightsReserved": "All Rights Reserved.",
+        "github": "Visit my GitHub profile",
+        "linkedin": "Visit my LinkedIn profile"
     }
 }

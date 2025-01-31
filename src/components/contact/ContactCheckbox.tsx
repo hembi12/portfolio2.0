@@ -13,9 +13,15 @@ const ContactCheckbox: React.FC<ContactCheckboxProps> = ({ error, register }) =>
 
     return (
         <div className="mb-4 flex items-start">
-            <input type="checkbox" {...register("privacy")} className="mt-1" />
+            <input
+                type="checkbox"
+                id="privacy"
+                {...register("privacy")}
+                className="mt-1"
+                aria-label={t('contact.checkbox.ariaLabel')}
+            />
             <label htmlFor="privacy" className="ml-2 text-gray-200 text-md">
-                {t('contact.checkbox.agree')} {" "}
+                {t('contact.checkbox.agree')}{" "}
                 <Link to="/privacy-policy" className="text-cyan-200 hover:text-cyan-50 hover:underline transition">
                     {t('contact.checkbox.privacyPolicy')}
                 </Link>

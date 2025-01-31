@@ -4,23 +4,21 @@ import HttpBackend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
-    .use(HttpBackend) // Cargar traducciones de manera asíncrona
+    .use(HttpBackend) // Permite cargar archivos JSON desde `public/locales`
     .use(LanguageDetector) // Detectar idioma automáticamente
     .use(initReactI18next) // Conectar i18n con React
     .init({
-        fallbackLng: 'en', // Idioma por defecto
-        lng: localStorage.getItem('i18nextLng') || 'en', // Cargar el idioma guardado
-        interpolation: {
-            escapeValue: false, // React maneja la seguridad de las cadenas
-        },
+        fallbackLng: 'en', // Idioma por defecto si no se encuentra traducción
+        lng: localStorage.getItem('i18nextLng') || 'en', // Recuperar idioma guardado
+        interpolation: { escapeValue: false }, // React maneja la seguridad de cadenas
         backend: {
-            loadPath: '/locales/{{lng}}/translation.json', // Ruta corregida para Vite
+            loadPath: '/locales/{{lng}}/translation.json', // Carga desde `public/locales/`
         },
         detection: {
-            order: ['querystring', 'cookie', 'localStorage', 'navigator'], // Prioridad de detección
-            caches: ['localStorage'], // Guardar idioma en localStorage
+            order: ['querystring', 'cookie', 'localStorage', 'navigator'],
+            caches: ['localStorage'], // Guarda el idioma en `localStorage`
         },
-        debug: true, // Habilitar logs en la consola para depuración
+        debug: import.meta.env.MODE === 'development', // Activa logs solo en desarrollo
     });
 
 export default i18n;

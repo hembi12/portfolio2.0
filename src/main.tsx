@@ -4,7 +4,12 @@ import './index.css';
 import '../config/i18n';
 import App from './App.tsx';
 
-createRoot(document.getElementById('root')!).render(
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+    throw new Error("No se encontró el elemento con id 'root'. Verifica tu index.html.");
+}
+
+createRoot(rootElement).render(
   <StrictMode>
     <App />
   </StrictMode>,

@@ -1,14 +1,14 @@
-// src/components/dock/DockComponent.tsx
 import React, { useState, useEffect, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getDockConfig } from './dockConfig';
 import { getDockItems } from './dockItems';
 import { Dock } from '../ui/dock';
 import { useMotionValue } from 'framer-motion';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Importa los estilos de toastify
 
 const DockItem = React.lazy(() => import('./DockItem'));
 const TooltipProvider = React.lazy(() => import('@radix-ui/react-tooltip').then(module => ({ default: module.Provider })));
-const ToastContainer = React.lazy(() => import('react-toastify').then(module => ({ default: module.ToastContainer })));
 
 const DockComponent: React.FC = () => {
     const { i18n, t } = useTranslation();
@@ -29,6 +29,17 @@ const DockComponent: React.FC = () => {
         const newLang = i18n.language === 'en' ? 'es' : 'en';
         i18n.changeLanguage(newLang);
         localStorage.setItem('i18nextLng', newLang);
+        
+        // ✅ Muestra un mensaje de confirmación con toast
+        toast.success(t('languageChanged'), {
+            position: 'top-center',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            theme: 'dark',
+        });
     };
 
     const dockItems = getDockItems(t, handleLanguageChange);
@@ -36,15 +47,8 @@ const DockComponent: React.FC = () => {
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <TooltipProvider>
-                <ToastContainer
-                    position="top-center"
-                    autoClose={3000}
-                    hideProgressBar
-                    closeOnClick
-                    pauseOnHover={false}
-                    draggable
-                    theme="dark"
-                />
+                {/* ✅ ToastContainer siempre disponible */}
+                <ToastContainer />
 
                 <Dock
                     className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 

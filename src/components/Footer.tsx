@@ -1,14 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
+    const { t } = useTranslation();
+
     return (
         <footer className="bg-black text-white py-6">
-            <div className="gap-4 pt-4 border-t border-gray-100 pb-16 max-w-3xl mx-auto px-4 text-center">
+            <div className="max-w-3xl mx-auto px-4 text-center border-t border-gray-100 pt-4 pb-16">
                 <p className="text-sm mb-4">
-                    Designed and Built by <span className="text-cyan-200 font-semibold">Héctor Martil</span>.
+                    {t("footer.designedBy")} <span className="text-cyan-200 font-semibold">Héctor Martil</span>.
                 </p>
                 <p className="text-sm">
-                    © {new Date().getFullYear()} All Rights Reserved.
+                    © {new Date().getFullYear()} {t("footer.rightsReserved")}
                 </p>
                 <div className="mt-4 flex justify-center gap-4">
                     <a
@@ -16,6 +19,7 @@ const Footer: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-cyan-200 hover:text-cyan-50 hover:underline transition"
+                        aria-label={t("footer.github")}
                     >
                         GitHub
                     </a>
@@ -24,6 +28,7 @@ const Footer: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-cyan-200 hover:text-cyan-50 hover:underline transition"
+                        aria-label={t("footer.linkedin")}
                     >
                         LinkedIn
                     </a>
