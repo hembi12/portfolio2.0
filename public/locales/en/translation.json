@@ -104,5 +104,75 @@
             "messageRequired": "Message is required.",
             "privacyRequired": "You must agree to the Privacy Policy."
         }
+    },
+    "workexperience": {
+        "title": "Steps in My Career",
+        "experience": {
+            "paypalRole": "Customer Solutions Agent",
+            "paypalDate": "July 2023 - Present",
+            "tpRole": "Customer Solutions Agent - Team Lead",
+            "tpDate": "August 2019 - June 2023",
+            "silaRole": "Security Monitoring Operator - Team Lead",
+            "silaDate": "November 2015 - July 2019"
+        },
+        "buttons": {
+            "viewCV": "View CV",
+            "download": "Download"
+        }
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "lastUpdate": "Last Update",
+        "section1": {
+            "title": "1. Information We Collect",
+            "description": "When you use this website, we may collect personal information as follows:",
+            "point1": "Directly provided information: Name, email, subject, and message content when using the contact form.",
+            "point2": "Automatically collected data: IP address, browser type, operating system, and site activity via cookies and similar technologies.",
+            "point3": "Cookies and tracking technologies: We use cookies to enhance the user experience and analyze site traffic."
+        },
+        "section2": {
+            "title": "2. Use of Information",
+            "description": "The collected information may be used to:",
+            "point1": "Respond to inquiries sent via the contact form.",
+            "point2": "Improve user experience and site functionality.",
+            "point3": "Comply with applicable legal and regulatory requirements."
+        },
+        "section3": {
+            "title": "3. Legal Basis for Data Processing",
+            "description": "Depending on your location, data processing is based on:",
+            "point1": "GDPR (European Union): Consent, contractual compliance, or legitimate interest.",
+            "point2": "CCPA (California, USA): Right to know, delete, and opt out of data sharing.",
+            "point3": "LFPDPPP (Mexico): Right of Access, Rectification, Cancellation, and Opposition (ARCO)."
+        },
+        "section4": {
+            "title": "4. User Rights",
+            "description": "Users have the following rights over their information:",
+            "point1": "Access stored personal data.",
+            "point2": "Rectify incorrect or outdated information.",
+            "point3": "Request deletion of personal data."
+        },
+        "contact": "To exercise these rights, contact us at",
+        "contactEmail": "hectormartilb@gmail.com",
+        "section5": {
+            "title": "5. Data Security",
+            "description": "We implement security measures to protect user data from unauthorized access, loss, or alteration. However, no data transmission over the Internet is 100% secure."
+        },
+        "section6": {
+            "title": "6. Use of Cookies",
+            "description": "This website uses cookies to enhance user experience and analyze traffic. You can manage or disable cookies in your browser settings."
+        },
+        "section7": {
+            "title": "7. Third-Party Links",
+            "description": "This website may contain links to external sites. We are not responsible for third-party privacy practices."
+        },
+        "section8": {
+            "title": "8. Changes to the Privacy Policy",
+            "description": "We reserve the right to update this policy at any time. It is recommended to review it periodically."
+        },
+        "section9": {
+            "title": "9. Contact",
+            "description": "If you have questions about this privacy policy, contact us at"
+        },
+        "backButton": "Back to Portfolio"
     }
 }

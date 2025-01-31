@@ -104,5 +104,75 @@
             "messageRequired": "El mensaje es obligatorio.",
             "privacyRequired": "Debes aceptar la Política de Privacidad."
         }
+    },
+    "workexperience": {
+        "title": "Pasos en mi Carrera",
+        "experience": {
+            "paypalRole": "Agente de Soluciones al Cliente",
+            "paypalDate": "Julio 2023 - Presente",
+            "tpRole": "Agente de Soluciones al Cliente - Líder de Equipo",
+            "tpDate": "Agosto 2019 - Junio 2023",
+            "silaRole": "Operador de Monitoreo de Seguridad - Líder de Equipo",
+            "silaDate": "Noviembre 2015 - Julio 2019"
+        },
+        "buttons": {
+            "viewCV": "Ver CV",
+            "download": "Descargar"
+        }
+    },
+    "privacy": {
+        "title": "Política de Privacidad",
+        "lastUpdate": "Última actualización",
+        "section1": {
+            "title": "1. Información que Recopilamos",
+            "description": "Cuando utilizas este sitio web, podemos recopilar información personal de las siguientes maneras:",
+            "point1": "Información proporcionada directamente: Nombre, correo electrónico, asunto y contenido del mensaje cuando usas el formulario de contacto.",
+            "point2": "Datos recopilados automáticamente: Dirección IP, tipo de navegador, sistema operativo y actividad en el sitio mediante cookies y tecnologías similares.",
+            "point3": "Cookies y tecnologías de rastreo: Utilizamos cookies para mejorar la experiencia del usuario y analizar el tráfico del sitio."
+        },
+        "section2": {
+            "title": "2. Uso de la Información",
+            "description": "La información recopilada puede utilizarse para:",
+            "point1": "Responder consultas enviadas a través del formulario de contacto.",
+            "point2": "Mejorar la experiencia del usuario y la funcionalidad del sitio.",
+            "point3": "Cumplir con requisitos legales y regulatorios aplicables."
+        },
+        "section3": {
+            "title": "3. Base Legal para el Tratamiento de Datos",
+            "description": "Dependiendo de tu ubicación, el tratamiento de datos personales se basa en:",
+            "point1": "GDPR (Unión Europea): Consentimiento, cumplimiento contractual o interés legítimo.",
+            "point2": "CCPA (California, EE.UU.): Derecho a conocer, eliminar y optar por no compartir datos.",
+            "point3": "LFPDPPP (México): Derecho de Acceso, Rectificación, Cancelación y Oposición (ARCO)."
+        },
+        "section4": {
+            "title": "4. Derechos del Usuario",
+            "description": "Los usuarios tienen los siguientes derechos sobre su información:",
+            "point1": "Acceder a los datos personales almacenados.",
+            "point2": "Rectificar información incorrecta o desactualizada.",
+            "point3": "Solicitar la eliminación de datos personales."
+        },
+        "contact": "Para ejercer estos derechos, contáctanos en",
+        "contactEmail": "hectormartilb@gmail.com",
+        "section5": {
+            "title": "5. Seguridad de la Información",
+            "description": "Implementamos medidas de seguridad para proteger la información del usuario contra accesos no autorizados, pérdida o alteración. Sin embargo, ninguna transmisión de datos por Internet es 100% segura."
+        },
+        "section6": {
+            "title": "6. Uso de Cookies",
+            "description": "Este sitio web utiliza cookies para mejorar la experiencia del usuario y analizar el tráfico. Puedes gestionar o deshabilitar cookies desde la configuración de tu navegador."
+        },
+        "section7": {
+            "title": "7. Enlaces a Terceros",
+            "description": "Este sitio web puede contener enlaces a sitios externos. No somos responsables de las prácticas de privacidad de terceros."
+        },
+        "section8": {
+            "title": "8. Cambios en la Política de Privacidad",
+            "description": "Nos reservamos el derecho de actualizar esta política en cualquier momento. Se recomienda revisarla periódicamente."
+        },
+        "section9": {
+            "title": "9. Contacto",
+            "description": "Si tienes preguntas sobre esta política de privacidad, contáctanos en"
+        },
+        "backButton": "Volver al Portafolio"
     }
 }
