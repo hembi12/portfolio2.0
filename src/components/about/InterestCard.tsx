@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { FaUserCircle, FaCheckCircle, FaComment, FaRetweet, FaHeart, FaShare, FaEllipsisH, FaBookmark } from "react-icons/fa";
+import React, { useState, useEffect, useCallback } from "react";
+import {
+    FaUserCircle, FaCheckCircle, FaComment, FaRetweet,
+    FaHeart, FaShare, FaEllipsisH, FaBookmark
+} from "react-icons/fa";
 
 interface Interest {
     name: string;
@@ -9,7 +12,7 @@ interface Interest {
     time: string;
 }
 
-// Función segura para manejar `localStorage` con tipado estricto
+// Función segura para manejar `localStorage`
 const safeLocalStorageGet = <T,>(key: string, defaultValue: T): T => {
     try {
         const item = localStorage.getItem(key);
@@ -20,79 +23,79 @@ const safeLocalStorageGet = <T,>(key: string, defaultValue: T): T => {
 };
 
 const InterestCard: React.FC<Interest> = ({ name, username, text, verified, time }) => {
-    const [likes, setLikes] = useState<number>(() => safeLocalStorageGet(`${username}-likes`, 0));
-    const [retweets, setRetweets] = useState<number>(() => safeLocalStorageGet(`${username}-retweets`, 0));
-    const [comments, setComments] = useState<number>(() => safeLocalStorageGet(`${username}-comments`, 0));
-    const [shares, setShares] = useState<number>(() => safeLocalStorageGet(`${username}-shares`, 0));
-    const [saved, setSaved] = useState<boolean>(() => safeLocalStorageGet(`${username}-saved`, false));
+    const [state, setState] = useState(() => ({
+        likes: safeLocalStorageGet(`${username}-likes`, 0),
+        retweets: safeLocalStorageGet(`${username}-retweets`, 0),
+        comments: safeLocalStorageGet(`${username}-comments`, 0),
+        shares: safeLocalStorageGet(`${username}-shares`, 0),
+        saved: safeLocalStorageGet(`${username}-saved`, false),
+    }));
 
+    // Efecto para actualizar localStorage al cambiar `state`
     useEffect(() => {
         try {
-            localStorage.setItem(`${username}-likes`, JSON.stringify(likes));
-            localStorage.setItem(`${username}-retweets`, JSON.stringify(retweets));
-            localStorage.setItem(`${username}-comments`, JSON.stringify(comments));
-            localStorage.setItem(`${username}-shares`, JSON.stringify(shares));
-            localStorage.setItem(`${username}-saved`, JSON.stringify(saved));
+            Object.entries(state).forEach(([key, value]) => {
+                localStorage.setItem(`${username}-${key}`, JSON.stringify(value));
+            });
         } catch {
             console.warn("No se pudo acceder a localStorage.");
         }
-    }, [username, likes, retweets, comments, shares, saved]);
+    }, [state, username]);
+
+    // Función optimizada para manejar cambios de estado
+    const handleAction = useCallback((key: keyof typeof state) => {
+        setState(prev => ({
+            ...prev,
+            [key]: key === "saved" ? !prev.saved : prev[key] + 1
+        }));
+    }, []);
 
     return (
         <figure className="w-80 p-4 rounded-xl bg-white shadow-md hover:bg-gray-100 border border-gray-200">
+            {/* Cabecera del tweet */}
             <div className="flex justify-between items-center">
                 <div className="flex items-center gap-3">
-                    <FaUserCircle className="text-gray-600" size={40} />
+                    <FaUserCircle className="text-gray-600" size={40} aria-label="User avatar" />
                     <div>
                         <figcaption className="text-md font-bold text-gray-900 flex items-center gap-1">
                             {name}
                             {verified && (
-                                <FaCheckCircle className={verified === "blue" ? "text-blue-500" : "text-yellow-500"} size={16} />
+                                <FaCheckCircle
+                                    className={verified === "blue" ? "text-blue-500" : "text-yellow-500"}
+                                    size={16}
+                                    aria-label="Verified account"
+                                />
                             )}
                         </figcaption>
-                        <p className="text-sm text-gray-500">{username} · <span className="text-gray-400">{time}</span></p>
+                        <p className="text-sm text-gray-500">
+                            {username} · <span className="text-gray-400">{time}</span>
+                        </p>
                     </div>
                 </div>
                 <button title="Más opciones" className="text-gray-500">
-                    <FaEllipsisH />
+                    <FaEllipsisH aria-hidden="true" />
                 </button>
             </div>
+
+            {/* Contenido del tweet */}
             <p className="text-sm text-gray-800 mt-2">{text}</p>
+
+            {/* Acciones del tweet */}
             <div className="flex justify-between text-gray-500 text-sm mt-3">
-                <button
-                    onClick={() => setComments(comments + 1)}
-                    className="flex items-center gap-1 hover:text-gray-700 transition-transform transform hover:scale-110"
-                    title="Comentar"
-                >
-                    <FaComment size={14} /> {comments}
+                <button onClick={() => handleAction("comments")} className="flex items-center gap-1 hover:text-gray-700 transition-transform transform hover:scale-110" title="Comentar" aria-label="Comentar">
+                    <FaComment size={14} /> {state.comments}
                 </button>
-                <button
-                    onClick={() => setRetweets(retweets + 1)}
-                    className="flex items-center gap-1 hover:text-green-600 transition-transform transform hover:scale-110"
-                    title="Retweet"
-                >
-                    <FaRetweet size={14} /> {retweets}
+                <button onClick={() => handleAction("retweets")} className="flex items-center gap-1 hover:text-green-600 transition-transform transform hover:scale-110" title="Retweet" aria-label="Retweet">
+                    <FaRetweet size={14} /> {state.retweets}
                 </button>
-                <button
-                    onClick={() => setLikes(likes + 1)}
-                    className="flex items-center gap-1 hover:text-red-500 transition-transform transform hover:scale-110"
-                    title="Me gusta"
-                >
-                    <FaHeart size={14} /> {likes}
+                <button onClick={() => handleAction("likes")} className="flex items-center gap-1 hover:text-red-500 transition-transform transform hover:scale-110" title="Me gusta" aria-label="Me gusta">
+                    <FaHeart size={14} /> {state.likes}
                 </button>
-                <button
-                    onClick={() => setSaved(!saved)}
-                    className={`flex items-center gap-1 transition-transform transform hover:scale-110 ${saved ? "text-blue-500" : "hover:text-blue-500"}`}
-                    title={saved ? "Quitar de guardados" : "Guardar"}
-                >
+                <button onClick={() => handleAction("saved")} className={`flex items-center gap-1 transition-transform transform hover:scale-110 ${state.saved ? "text-blue-500" : "hover:text-blue-500"}`} title={state.saved ? "Quitar de guardados" : "Guardar"} aria-label={state.saved ? "Quitar de guardados" : "Guardar"}>
                     <FaBookmark size={14} />
                 </button>
-                <button
-                    onClick={() => setShares(shares + 1)}
-                    className="flex items-center gap-1 hover:text-gray-700 transition-transform transform hover:scale-110"
-                    title="Compartir"
-                >
-                    <FaShare size={14} /> {shares}
+                <button onClick={() => handleAction("shares")} className="flex items-center gap-1 hover:text-gray-700 transition-transform transform hover:scale-110" title="Compartir" aria-label="Compartir">
+                    <FaShare size={14} /> {state.shares}
                 </button>
             </div>
         </figure>

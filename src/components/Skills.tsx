@@ -35,7 +35,7 @@ export const Skills: React.FC = () => {
 
             <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
                 <span className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent pointer-events-none whitespace-pre-wrap text-center text-7xl font-semibold leading-none">
-                    15
+                    16
                 </span>
 
                 <Suspense fallback={<div className="text-gray-400 text-center">Loading Icons...</div>}>
