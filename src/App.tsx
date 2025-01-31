@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async"; // ✅ Importamos el provider
+import { HelmetProvider } from "react-helmet-async";
+import { Element } from "react-scroll"; // ✅ Importamos Element de react-scroll
 import Header from "./components/Header";
 import About from "./components/about/About";
 import WorkExperience from "./components/WorkExperience";
@@ -14,7 +15,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const App: React.FC = () => {
     return (
-        <HelmetProvider> {/* ✅ Envolvemos la App */}
+        <HelmetProvider>
             <Router>
                 <div className="font-sans">
                     <Routes>
@@ -22,14 +23,26 @@ const App: React.FC = () => {
                             path="/"
                             element={
                                 <>
-                                    <Header />
-                                    <About />
-                                    <Projects />
-                                    <Skills />
-                                    <Contact />
-                                    <WorkExperience />
-                                    <Education />
-                                    <DockComponent />
+                                    <Header/>
+                                    <Element name="about">
+                                        <About />
+                                    </Element>
+                                    <Element name="projects">
+                                        <Projects />
+                                    </Element>
+                                    <Element name="skills">
+                                        <Skills />
+                                    </Element>
+                                    <Element name="contact">
+                                        <Contact />
+                                    </Element>
+                                    <Element name="work-experience">
+                                        <WorkExperience />
+                                    </Element>
+                                    <Element name="education">
+                                        <Education />
+                                    </Element>
+                                    <DockComponent /> {/* ✅ Dock usará estos IDs para desplazarse */}
                                     <Footer />
                                 </>
                             }

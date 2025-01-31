@@ -5,8 +5,9 @@ import { getDockItems } from './dockItems';
 import { Dock } from '../ui/dock';
 import { useMotionValue } from 'framer-motion';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Estilos de toastify
-import { Provider as TooltipProvider } from '@radix-ui/react-tooltip'; // Importación directa
+import 'react-toastify/dist/ReactToastify.css';
+import { Provider as TooltipProvider } from '@radix-ui/react-tooltip';
+import { Link } from "react-scroll"; // ✅ Importamos Link de react-scroll
 
 const DockItem = React.lazy(() => import('./DockItem'));
 
@@ -17,7 +18,6 @@ const DockComponent: React.FC = () => {
     );
     const mouseX = useMotionValue(Infinity);
 
-    // 🛠️ useCallback evita que handleResize cambie en cada render
     const handleResize = useCallback(() => {
         setDockConfig(getDockConfig(window.innerWidth));
     }, []);
@@ -31,8 +31,7 @@ const DockComponent: React.FC = () => {
         const newLang = i18n.language === 'en' ? 'es' : 'en';
         i18n.changeLanguage(newLang);
         localStorage.setItem('i18nextLng', newLang);
-        
-        // ✅ Notificación de éxito con traducción
+
         toast.success(t('languageChanged'), {
             position: 'top-center',
             autoClose: 3000,
@@ -44,11 +43,14 @@ const DockComponent: React.FC = () => {
         });
     };
 
-    const dockItems = getDockItems(t, handleLanguageChange);
+    // 🔹 Agregamos el identificador de sección en cada `dockItem`
+    const dockItems = getDockItems(t, handleLanguageChange).map(item => ({
+        ...item,
+        sectionId: item.sectionId || item.label.toLowerCase().replace(/\s/g, "-")
+    }));    
 
     return (
         <>
-            {/* ✅ ToastContainer siempre disponible */}
             <ToastContainer />
 
             <Suspense fallback={<div>Loading...</div>}>
@@ -63,14 +65,21 @@ const DockComponent: React.FC = () => {
                         onMouseLeave={() => mouseX.set(Infinity)}
                     >
                         {dockItems.map((item) => (
-                            <DockItem
+                            <Link
                                 key={item.label}
-                                item={item}
-                                mouseX={mouseX}
-                                size={dockConfig.size}
-                                magnification={dockConfig.magnification}
-                                distance={dockConfig.distance}
-                            />
+                                to={item.sectionId} // 🔹 Ahora apunta a un ID de sección
+                                smooth={true}
+                                duration={500}
+                                className="cursor-pointer"
+                            >
+                                <DockItem
+                                    item={item}
+                                    mouseX={mouseX}
+                                    size={dockConfig.size}
+                                    magnification={dockConfig.magnification}
+                                    distance={dockConfig.distance}
+                                />
+                            </Link>
                         ))}
                     </Dock>
                 </TooltipProvider>

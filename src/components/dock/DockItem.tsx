@@ -2,9 +2,11 @@ import React, { useRef, useLayoutEffect, useState } from 'react';
 import { motion, MotionValue, useSpring, useTransform } from 'framer-motion';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { DockIcon } from '../ui/dock';
+import { Link } from "react-scroll"; // ✅ Importamos react-scroll
 
 type DockItemType = {
-    href?: string;
+    href?: string;  // Para enlaces externos
+    sectionId?: string; // ✅ Nuevo: Para scroll interno
     icon: React.FC<React.SVGProps<SVGSVGElement>>;
     label: string;
     onClick?: () => void;
@@ -54,9 +56,21 @@ const DockItem: React.FC<DockItemProps> = ({ item, mouseX, size, magnification, 
                     className="flex items-center justify-center"
                 >
                     <DockIcon>
-                        {item.href ? (
+                        {/* 🔹 Si tiene un `sectionId`, usamos `Link` de react-scroll */}
+                        {item.sectionId ? (
+                            <Link
+                                to={item.sectionId}
+                                smooth={true}
+                                duration={500}
+                                className="rounded-full p-2 cursor-pointer"
+                            >
+                                <item.icon className="w-6 h-6 hover:text-cyan-200 transition-colors duration-200" />
+                            </Link>
+                        ) : item.href ? (
                             <a
                                 href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 aria-label={item.label}
                                 className="rounded-full p-2"
                                 role="button"
